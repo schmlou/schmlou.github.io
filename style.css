@@ -33,6 +33,33 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background-color: #456882;
+    background-color: transparent; /*#456882*/
     box-shadow: none;
+}
+
+.logo{
+    font-size: 3rem;
+    font-weight: 550;
+    color: #234C6A;
+    cursor: pointer; 
+    transition: 0.5s ease;
+}
+
+/*.logo:hover{
+    transform: scale(1.1);
+}*/
+
+nav a{
+    font-size: 1.8rem;
+    font-weight: 350;
+    margin-left: 4rem;
+    color: #d2c1b6;
+    transition: 0.3s ease;
+    border-bottom: 3px;
+}
+
+nav a:hover,
+nav a.active{
+    color: #234C6A;
+    border-bottom: 3px solid #234C6A;
 }
