@@ -11,14 +11,32 @@
 
 <body>
     <header>
-        <a href="#" class="logo">Louis</a>
         <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">About Me</a>
-            <a href="#">Education</a>
-            <a href="#">Experience</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                            viewBox="0 -960 960 960" width="26px" fill="#d2c1b6">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href="#" class="logo">Louis</a></li>
+                <li class="hideOnMobile"><a href="#" class="active">Home</a></li>
+                <li class="hideOnMobile"><a href="#">About Me</a></li>
+                <li class="hideOnMobile"><a href="#">Education</a></li>
+                <li class="hideOnMobile"><a href="#">Experience</a></li>
+                <li class="hideOnMobile"><a href="#">Projects</a></li>
+                <li class="hideOnMobile"><a href="#">Contact</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="22px" viewBox="0 -960 960 960" width="22px" fill="#d2c1b6">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
         </nav>
     </header>
     <section class="home">
@@ -41,6 +59,16 @@
             <a href="#" class="btn">Download CV</a>
         </div>
     </section>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
 </body>
 
 </html>
