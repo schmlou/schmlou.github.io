@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Wildfire Risk Assessment Using Machine Learning",
+    "description": "Developed a predictive model for wildfire risk assessment integrating satellite imagery, weather data, and historical fire records. The model achieved 87% accuracy in predicting high-risk areas.",
+    "image": "assets/wildfire-project.jpg",
+    "venue": "University of Salzburg",
+    "authors": "Louis Schmalisch",
+    "year": 2024,
+    "tags": ["machine-learning", "remote-sensing", "gis"],
+    "links": {
+      "paper": "https://example.com/wildfire-paper.pdf",
+      "code": "https://github.com/yourusername/wildfire-risk"
+    }
+  },
+  {
+    "title": "Urban Heat Island Mapping",
+    "description": "Created detailed heat maps of urban areas using Landsat thermal imagery and land cover classification to identify heat island effects and vulnerable neighborhoods.",
+    "image": "assets/urban-heat.jpg",
+    "venue": "Z_GIS Research",
+    "authors": "Louis Schmalisch, Dr. Supervisor Name",
+    "year": 2024,
+    "tags": ["remote-sensing", "urban-planning", "climate"],
+    "links": {
+      "paper": "https://example.com/urban-heat-paper.pdf",
+      "demo": "https://example.com/heat-map-viewer"
+    }
+  },
+  {
+    "title": "Automated Land Cover Classification",
+    "description": "Implemented a deep learning pipeline for automated land cover classification using Sentinel-2 imagery, achieving state-of-the-art results on European landscapes.",
+    "image": "assets/land-cover.jpg",
+    "venue": "Master's Thesis",
+    "authors": "Louis Schmalisch",
+    "year": 2025,
+    "tags": ["deep-learning", "remote-sensing", "classification"],
+    "links": {
+      "code": "https://github.com/yourusername/land-cover-dl"
+    }
+  }
+]

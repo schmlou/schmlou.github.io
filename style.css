@@ -267,6 +267,29 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Section card styling - boxes around each major section */
+section.mb-16 {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 2px 8px var(--color-shadow);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+section.mb-16:hover {
+    box-shadow: 0 4px 16px var(--color-shadow);
+    transform: translateY(-2px);
+}
+
+/* Responsive padding for sections on mobile */
+@media (max-width: 640px) {
+    section.mb-16 {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+}
+
 .cactus-link {
     color: var(--color-link);
     text-decoration: underline;
@@ -570,10 +593,10 @@ body {
     margin-bottom: 1rem;
 }
 
-.prose h1 { font-size: 2.25rem; }
-.prose h2 { font-size: 1.875rem; }
-.prose h3 { font-size: 1.5rem; }
-.prose h4 { font-size: 1.25rem; }
+.prose h1 { font-size: 2.75rem; }
+.prose h2 { font-size: 2.25rem; }
+.prose h3 { font-size: 1.25rem; }
+.prose h4 { font-size: 1.125rem; }
 
 .prose p {
     margin-bottom: 1.25rem;
@@ -782,9 +805,9 @@ button:focus-visible {
         font-size: 1.25rem;
     }
     
-    .prose h1 { font-size: 1.875rem; }
-    .prose h2 { font-size: 1.5rem; }
-    .prose h3 { font-size: 1.25rem; }
+    .prose h1 { font-size: 2.25rem; }
+    .prose h2 { font-size: 1.875rem; }
+    .prose h3 { font-size: 1.125rem; }
     
     .contact-links {
         flex-direction: column;
@@ -1357,5 +1380,207 @@ html {
         width: 100%;
         margin-left: 0;
         opacity: 0.8;
+    }
+}
+
+/* Projects Carousel Styles */
+.projects-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    margin-top: 2rem;
+    padding: 0 60px;
+}
+
+.projects-carousel {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+}
+
+.projects-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(50px);
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.projects-card.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+/* Directional slide animations */
+.projects-card.slide-out-left {
+    animation: slideOutLeft 0.5s ease-in-out forwards;
+}
+
+.projects-card.slide-out-right {
+    animation: slideOutRight 0.5s ease-in-out forwards;
+}
+
+.projects-card.slide-in-left {
+    animation: slideInLeft 0.5s ease-in-out forwards;
+}
+
+.projects-card.slide-in-right {
+    animation: slideInRight 0.5s ease-in-out forwards;
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Carousel Navigation Container */
+.projects-carousel-container {
+    position: relative;
+}
+
+/* Carousel Dots and Arrows Container */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+/* Carousel Navigation Arrows */
+.carousel-arrow {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    background: var(--color-card-bg);
+    border: 2px solid var(--color-border);
+    color: var(--color-accent-2);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.carousel-arrow:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+    box-shadow: 0 4px 12px var(--color-shadow);
+    transform: scale(1.1);
+}
+
+.carousel-arrow:active {
+    transform: scale(0.95);
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-border);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.carousel-dot:hover {
+    background: color-mix(in srgb, var(--color-accent-2) 60%, var(--color-border));
+    transform: scale(1.2);
+}
+
+.carousel-dot.active {
+    background: var(--color-accent);
+    width: 32px;
+    border-radius: 6px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-arrow-left {
+        left: 8px;
+    }
+
+    .carousel-arrow-right {
+        right: 8px;
+    }
+}
+
+@media (max-width: 640px) {
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+        opacity: 0.8;
+    }
+
+    .carousel-arrow-left {
+        left: 5px;
+    }
+
+    .carousel-arrow-right {
+        right: 5px;
+    }
+
+    .projects-carousel {
+        min-height: 500px;
     }
 }

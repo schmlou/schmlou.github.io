@@ -1,102 +1,39 @@
-<!--
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declares this as an HTML5 document -->
+<html lang="en" class="scroll-smooth"> <!-- Sets language to English and enables smooth scrolling -->
 
 <head>
-    <meta charset="UTF-8">
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 for international characters -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <title>ePortfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <!-- Makes site responsive on mobile devices -->
 
-<body>
-    <header>
-        <nav>
-            <ul class="sidebar">
-                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
-                            viewBox="0 -960 960 960" width="26px" fill="#d2c1b6">
-                            <path
-                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                        </svg></a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Education</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <ul>
-                <li><a href="#" class="logo">LS</a></li>
-                <li class="hideOnMobile"><a href="#" class="active">Home</a></li>
-                <li class="hideOnMobile"><a href="#">About Me</a></li>
-                <li class="hideOnMobile"><a href="#">Education</a></li>
-                <li class="hideOnMobile"><a href="#">Experience</a></li>
-                <li class="hideOnMobile"><a href="#">Projects</a></li>
-                <li class="hideOnMobile"><a href="#">Contact</a></li>
-                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                            height="22px" viewBox="0 -960 960 960" width="22px" fill="#d2c1b6">
-                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                        </svg></a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="main.jpg" alt="test"> 
-        </div>
-        <div class="home-text">
-            <h1>Hi, I'm <span>Louis</span></h1>
-            <h2> I'm a <span>Master Student at Univeristy of Salzburg </span></h2>
-            <h3><span>| B.Sc. Geography |</span></h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, est blanditiis iusto
-                necessitatibus ratione et voluptatum unde saepe magni delectus vel voluptate obcaecati vero hic!
-                Rerum consequatur quaerat assumenda ex?</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            </div>
-            <a href="#" class="btn">Download CV</a>
-        </div>
-    </section>
-    <script>
-        function showSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.display = 'flex';
-        }
-        function hideSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.display = 'none';
-        }
-    </script>
-</body>
+    <!-- Page title and description for SEO -->
+    <title>Louis Schmalisch - Portfolio</title> <!-- Title shown in browser tab -->
+    <meta name="description" content="master student at Z_GIS Salzburg"> <!-- Description for search engines -->
 
-</html>
-
--->
-
-
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louis Schmalisch - Portfolio</title>
-    <meta name="description" content="master student at Z_GIS Salzburg">
+    <!-- Favicon - small icon shown in browser tab -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- CSS Stylesheet - controls all the visual styling -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font - JetBrains Mono (monospace font used throughout the site) -->
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Inline script to load theme preference BEFORE page renders (prevents flash) -->
     <script>
+        // This is an IIFE (Immediately Invoked Function Expression) - runs immediately
         (function () {
             try {
+                // Try to get saved theme from browser's localStorage
                 var saved = localStorage.getItem('theme');
+                // Use saved theme if it's valid (dark or light), otherwise default to light
                 var theme = saved === 'dark' || saved === 'light' ? saved : 'light';
+                // Apply theme to the root HTML element via data attribute
                 document.documentElement.setAttribute('data-theme', theme);
             } catch (e) {
+                // If localStorage fails (some browsers block it), default to light theme
                 document.documentElement.setAttribute('data-theme', 'light');
             }
         })();
@@ -104,15 +41,22 @@
 </head>
 
 <body class="bg-global-bg text-global-text antialiased">
-    <!-- Fixed Header -->
+    <!-- Body with CSS utility classes for background, text color, and smooth fonts -->
+
+    <!-- Fixed Header - stays at top when scrolling -->
     <header id="main-header" class="group">
-        <div class="header-grid">
-            <!-- Logo -->
+        <div class="header-grid"> <!-- Grid container for header layout -->
+
+            <!-- Logo Section - clickable SVG logo -->
             <a href="#" class="group header-logo flex items-center">
+                <!-- Link wrapping the logo, clicking triggers party animation -->
+                <!-- SVG Logo - geometric design with green/purple colors -->
                 <svg aria-hidden="true" class="me-3 h-10 w-6 sm:me-3 sm:h-20 sm:w-12" fill="none" focusable="false"
                     viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
-                    <title>Logo</title>
-                    <g shape-rendering="crispEdges">
+                    <title>Logo</title> <!-- Screen reader title -->
+                    <g shape-rendering="crispEdges"> <!-- Group with crisp edge rendering -->
+                        <!-- Multiple <g> groups create the geometric pattern -->
+                        <!-- Green blocks forming an 'L' shape -->
                         <g>
                             <use xlink:href="#SvgjsSymbol1009" x="50" y="600" fill="#5ff26b"></use>
                             <use xlink:href="#SvgjsSymbol1010" x="50" y="600" fill="#98ff9c"></use>
@@ -218,6 +162,8 @@
                             <use xlink:href="#SvgjsSymbol1010" x="50" y="500" fill="#98ff9c"></use>
                             <use xlink:href="#SvgjsSymbol1011" x="50" y="500" fill="#0cbe3b"></use>
                         </g>
+
+                        <!-- Purple blocks forming an 'S' shape (overlaid on the green) -->
                         <g>
                             <use xlink:href="#SvgjsSymbol1009" x="550" y="150" fill="#af67ff"></use>
                             <use xlink:href="#SvgjsSymbol1010" x="550" y="150" fill="#e497ff"></use>
@@ -299,6 +245,8 @@
                             <use xlink:href="#SvgjsSymbol1011" x="50" y="500" fill="#0cbe3b"></use>
                         </g>
                     </g>
+
+                    <!-- Symbol definitions - reusable shapes that create the isometric blocks -->
                     <symbol id="SvgjsSymbol1000">
                         <polygon points="0,12.5 25,0 50,12.5 25,25"></polygon>
                     </symbol>
@@ -327,55 +275,67 @@
                     <symbol id="SvgjsSymbol1008">
                         <polygon points="87.5,87.5 175,43.75 175,131.25 87.5,175"></polygon>
                     </symbol>
-                    <symbol id="SvgjsSymbol1009">
+                    <!-- These three symbols create the 3D isometric block effect -->
+                    <symbol id="SvgjsSymbol1009"> <!-- Top face -->
                         <polygon points="0,50 100,0 200,50 100,100"></polygon>
                     </symbol>
-                    <symbol id="SvgjsSymbol1010">
+                    <symbol id="SvgjsSymbol1010"> <!-- Left face -->
                         <polygon points="0,50 100,100 100,200 0,150"></polygon>
                     </symbol>
-                    <symbol id="SvgjsSymbol1011">
+                    <symbol id="SvgjsSymbol1011"> <!-- Right face -->
                         <polygon points="100,100 200,50 200,150 100,200"></polygon>
                     </symbol>
                 </svg>
             </a>
 
-            <!-- Title -->
+            <!-- Name/Title Display -->
             <div class="header-title">
                 <span class="text-xl font-bold sm:text-2xl">Louis Schmalisch</span>
+                <!-- Your name, larger on desktop (sm:) -->
             </div>
 
-            <!-- Desktop Navigation -->
+            <!-- Desktop Navigation Menu -->
             <nav class="mobile-nav-menu header-nav sm:flex sm:flex-row sm:items-center" id="navigation-menu">
-                <a href="#about">About</a>
-                <!-- <a href="#news">News</a> -->
-                <a href="#projects">Projects</a>
-                <a href="#cv">cv</a>
+                <!-- Each link jumps to a section on the page using # anchors -->
+                <a href="#about">About</a> <!-- Jumps to the About section -->
+                <a href="#projects">Projects</a> <!-- Jumps to the Projects section -->
+                <a href="#experience">Experience</a> <!-- Jumps to the Experience section -->
+                <a href="#cv">cv</a> <!-- Jumps to the CV section -->
             </nav>
 
-            <!-- Controls -->
+            <!-- Control Buttons (Theme toggle & Mobile menu) -->
             <div class="header-controls flex items-center gap-3">
-                <!-- Theme Toggle -->
+
+                <!-- Theme Toggle Button - switches between light and dark mode -->
                 <button id="theme-toggle"
                     class="flex h-7 w-7 items-center justify-center rounded-md border border-accent-2/20 bg-accent-2/10 p-1 transition-colors hover:bg-accent-2/20"
-                    aria-label="Switch to dark theme">
+                    aria-label="Switch to dark theme"> <!-- Accessibility label for screen readers -->
+
+                    <!-- Sun icon - shown in dark mode (means "switch to light") -->
                     <svg class="sun-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
                             d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
                             clip-rule="evenodd"></path>
                     </svg>
+
+                    <!-- Moon icon - shown in light mode (means "switch to dark") -->
                     <svg class="moon-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                     </svg>
                 </button>
 
-                <!-- Mobile Menu Toggle -->
+                <!-- Mobile Menu Toggle - only visible on small screens (sm:hidden) -->
                 <button id="toggle-navigation-menu"
                     class="flex h-7 w-7 items-center justify-center rounded-md border border-accent-2/20 bg-accent-2/10 p-1 transition-colors hover:bg-accent-2/20 sm:hidden"
                     aria-expanded="false" aria-label="Toggle navigation menu">
+
+                    <!-- Hamburger menu icon (three lines) -->
                     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
+
+                    <!-- Close icon (X) - shown when menu is open -->
                     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
                         </path>
@@ -385,42 +345,44 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="mx-auto max-w-3xl px-4 sm:px-8">
-        <!-- About Section -->
-        <section id="about" class="mb-16">
-            <div class="prose" id="about-content">
-                <div class="loading-spinner">Loading about content...</div>
+    <!-- Main Content Area - contains all page sections -->
+    <main class="mx-auto max-w-3xl px-4 sm:px-8"> <!-- Centered with max width, horizontal padding -->
+
+        <!-- About Section - loads content from static/about.md -->
+        <section id="about" class="mb-16"> <!-- id="about" allows #about link to jump here -->
+            <div class="prose" id="about-content"> <!-- id used by JavaScript to inject content -->
+                <div class="loading-spinner">Loading about content...</div> <!-- Placeholder shown while loading -->
             </div>
         </section>
 
-        <!-- News Section -->
-        <!-- <section id="news" class="mb-16">
-            <div class="prose" id="news-content">
-                <div class="loading-spinner">Loading news content...</div>
-            </div>
-        </section> -->
-
-        <!-- Projects Section -->
+        <!-- Projects Section - loads content from static/projects.json -->
         <section id="projects" class="mb-16">
             <div class="prose" id="projects-content">
                 <div class="loading-spinner">Loading projects content...</div>
             </div>
         </section>
 
-        <!-- CV Section -->
-        <section id="cv class=" mb-16">
+        <!-- Experience Section - loads content from static/experience.md -->
+        <section id="experience" class="mb-16">
+            <div class="prose" id="experience-content">
+                <div class="loading-spinner">Loading experience content...</div>
+            </div>
+        </section>
+
+        <!-- CV Section - loads content from static/cv.md -->
+        <section id="cv" class="mb-16">
             <div class="prose" id="cv-content">
                 <div class="loading-spinner">Loading cv content...</div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer - credit text at bottom of page -->
     <div class="mx-auto max-w-3xl px-4 sm:px-8 py-8 text-center text-sm opacity-75">
-        <p>Inspired by J Rosser</p>
+        <p>Louis Schmalisch • <a href="LICENSE" target="_blank">MIT License</a> • Design inspired by <a href="https://jrosser.co.uk" target="_blank">J Rosser</a></p>
     </div>
 
+    <!-- Load JavaScript file - handles all dynamic functionality -->
     <script src="script.js"></script>
 </body>
 

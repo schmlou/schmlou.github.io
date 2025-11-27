@@ -169,6 +169,8 @@ class NavigationHighlight {
     constructor() {
         this.sections = [];
         this.navLinks = [];
+        this.currentActiveId = null;
+        this.throttleTimeout = null;
         this.init();
     }
 
@@ -176,15 +178,23 @@ class NavigationHighlight {
         // Get all sections and navigation links
         this.sections = document.querySelectorAll('section[id]');
         this.navLinks = document.querySelectorAll('#navigation-menu a[href^="#"]');
-        
+
         if (this.sections.length > 0 && this.navLinks.length > 0) {
-            // Set initial active state based on URL hash only
+            // Set initial active state based on URL hash or scroll position
             this.setInitialActiveState();
-            
-            // Handle hash changes (but no scroll-based highlighting)
+
+            // Handle hash changes
             window.addEventListener('hashchange', () => {
                 this.handleHashChange();
             });
+
+            // Track scroll position to highlight active section
+            window.addEventListener('scroll', () => {
+                this.handleScroll();
+            }, { passive: true });
+
+            // Initial check on load
+            this.updateActiveSection();
         }
     }
 
@@ -193,8 +203,10 @@ class NavigationHighlight {
         if (hash && hash !== '#') {
             const targetId = hash.substring(1);
             this.highlightNavLink(targetId);
+        } else {
+            // Highlight based on current scroll position
+            this.updateActiveSection();
         }
-        // No default active state - only highlight when there's a hash in URL
     }
 
     handleHashChange() {
@@ -203,8 +215,53 @@ class NavigationHighlight {
             const targetId = hash.substring(1);
             this.highlightNavLink(targetId);
         } else {
-            // Clear all active states when there's no hash
-            this.clearAllActiveStates();
+            this.updateActiveSection();
+        }
+    }
+
+    handleScroll() {
+        // Throttle scroll events for better performance
+        if (this.throttleTimeout) {
+            return;
+        }
+
+        this.throttleTimeout = setTimeout(() => {
+            this.updateActiveSection();
+            this.throttleTimeout = null;
+        }, 100);
+    }
+
+    updateActiveSection() {
+        // Get current scroll position
+        const scrollPosition = window.scrollY + 150; // Offset for header height
+
+        let activeId = null;
+
+        // Find which section is currently in view
+        this.sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionBottom = sectionTop + sectionHeight;
+
+            // Check if scroll position is within this section
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                activeId = section.getAttribute('id');
+            }
+        });
+
+        // If we're at the very top, clear active state
+        if (window.scrollY < 100) {
+            activeId = null;
+        }
+
+        // Only update if the active section has changed
+        if (activeId !== this.currentActiveId) {
+            this.currentActiveId = activeId;
+            if (activeId) {
+                this.highlightNavLink(activeId);
+            } else {
+                this.clearAllActiveStates();
+            }
         }
     }
 
@@ -223,7 +280,7 @@ class NavigationHighlight {
         }
     }
 
-    // Method to clear all active states (useful for debugging)
+    // Method to clear all active states
     clearAllActiveStates() {
         this.navLinks.forEach(link => {
             link.classList.remove('active');
@@ -260,7 +317,7 @@ class LazyImageLoader {
 // Markdown content loader
 class MarkdownLoader {
     constructor() {
-        this.sections = ['about', 'news', 'publications', 'resume'];
+        this.sections = ['about', 'experience', 'cv'];
         this.init();
     }
 
@@ -269,6 +326,8 @@ class MarkdownLoader {
         this.sections.forEach(section => {
             this.loadMarkdown(section);
         });
+        // Load projects from JSON
+        this.loadProjects();
     }
 
     async loadMarkdown(section) {
@@ -277,9 +336,9 @@ class MarkdownLoader {
 
         // Try multiple path strategies for better compatibility
         const pathsToTry = [
-            `./${section}.md`,           // Relative to current directory
-            `${section}.md`,             // Direct relative path
-            `/${section}.md`             // Absolute from root (for some GitHub Pages setups)
+            `./static/${section}.md`,    // Relative to static directory
+            `static/${section}.md`,      // Direct relative path
+            `/static/${section}.md`      // Absolute from root (for some GitHub Pages setups)
         ];
 
         let lastError = null;
@@ -367,6 +426,271 @@ class MarkdownLoader {
 
         return html;
     }
+
+    async loadProjects() {
+        const contentElement = document.getElementById('projects-content');
+        if (!contentElement) return;
+
+        const pathsToTry = [
+            './static/projects.json',
+            'static/projects.json',
+            '/static/projects.json'
+        ];
+
+        let lastError = null;
+
+        for (const fullPath of pathsToTry) {
+            try {
+                console.log(`Trying to fetch projects from: ${fullPath}`);
+                const response = await fetch(fullPath);
+                if (response.ok) {
+                    const projects = await response.json();
+                    const html = this.renderProjects(projects);
+                    contentElement.innerHTML = html;
+                    // Apply hover effect to new content
+                    if (typeof window.applyBHoverEffect === 'function') {
+                        window.applyBHoverEffect(contentElement);
+                    }
+                    console.log(`Successfully loaded projects from: ${fullPath}`);
+                    return; // Success, exit early
+                } else {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+            } catch (error) {
+                console.warn(`Failed to load projects from ${fullPath}:`, error.message);
+                lastError = error;
+                // Continue to next path
+            }
+        }
+
+        // If we get here, all paths failed
+        console.error('Error loading projects - all paths failed:', lastError);
+        contentElement.innerHTML = `
+            <h2 class="title">Projects</h2>
+            <div class="error-message">
+                <p>Sorry, unable to load projects at this time.</p>
+                <p><small>Last error: ${lastError?.message || 'Unknown error'}</small></p>
+            </div>
+        `;
+        // Apply hover effect to error content
+        if (typeof window.applyBHoverEffect === 'function') {
+            window.applyBHoverEffect(contentElement);
+        }
+    }
+
+    renderProjects(projects) {
+        let html = '<h2 class="title">Projects</h2>';
+
+        if (!projects || projects.length === 0) {
+            html += '<p>No projects available yet.</p>';
+            return html;
+        }
+
+        // Create carousel container
+        html += '<div class="projects-carousel-container">';
+        html += '<div class="projects-carousel">';
+
+        projects.forEach((project, index) => {
+            html += `
+                <div class="projects-card ${index === 0 ? 'active' : ''}" data-index="${index}">
+                    ${project.image ? `
+                        <div class="projects-image">
+                            <img src="${project.image}" alt="${project.title}" loading="lazy">
+                        </div>
+                    ` : ''}
+                    <div class="projects-content">
+                        <h3 class="projects-title">
+                            ${project.links?.paper ?
+                                `<a href="${project.links.paper}" class="projects-link" target="_blank" rel="noopener noreferrer">${project.title}</a>` :
+                                `<span class="projects-link">${project.title}</span>`
+                            }
+                        </h3>
+                        ${project.venue ? `<div class="projects-venue">${project.venue}${project.year ? ` • ${project.year}` : ''}</div>` : ''}
+                        ${project.authors ? `<div class="projects-authors">${project.authors}</div>` : ''}
+                        ${project.description ? `<p class="projects-description">${project.description}</p>` : ''}
+                        ${project.tags && project.tags.length > 0 ? `
+                            <div class="projects-tags">
+                                ${project.tags.map(tag => `<span class="tag tag-${tag.toLowerCase().replace(/\s+/g, '-')}">${tag}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                        ${project.links && (project.links.paper || project.links.code || project.links.demo) ? `
+                            <div class="project-links">
+                                ${project.links.paper ? `<a href="${project.links.paper}" target="_blank" rel="noopener noreferrer">Paper</a>` : ''}
+                                ${project.links.code ? `<a href="${project.links.code}" target="_blank" rel="noopener noreferrer">Code</a>` : ''}
+                                ${project.links.demo ? `<a href="${project.links.demo}" target="_blank" rel="noopener noreferrer">Demo</a>` : ''}
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        });
+
+        html += '</div>'; // Close carousel
+
+        // Add navigation arrows and dots
+        if (projects.length > 1) {
+            html += `
+                <div class="carousel-dots">
+                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous project">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    ${projects.map((_, index) => `
+                        <button class="carousel-dot ${index === 0 ? 'active' : ''}" data-index="${index}" aria-label="Go to project ${index + 1}"></button>
+                    `).join('')}
+                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next project">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+            `;
+        }
+
+        html += '</div>'; // Close container
+
+        // Initialize carousel after a short delay to ensure DOM is ready
+        setTimeout(() => this.initCarousel(), 100);
+
+        return html;
+    }
+
+    initCarousel() {
+        const carousel = document.querySelector('.projects-carousel');
+        if (!carousel) return;
+
+        const cards = carousel.querySelectorAll('.projects-card');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const leftArrow = document.querySelector('.carousel-arrow-left');
+        const rightArrow = document.querySelector('.carousel-arrow-right');
+        let currentIndex = 0;
+
+        const showCard = (index, direction = 'next') => {
+            // Hide all cards
+            cards.forEach(card => {
+                card.classList.remove('active', 'slide-out-left', 'slide-out-right', 'slide-in-left', 'slide-in-right');
+            });
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Add slide-out animation to current card
+            if (cards[currentIndex]) {
+                cards[currentIndex].classList.add(direction === 'next' ? 'slide-out-left' : 'slide-out-right');
+            }
+
+            // Show selected card with slide-in animation
+            if (cards[index]) {
+                cards[index].classList.add('active', direction === 'next' ? 'slide-in-right' : 'slide-in-left');
+            }
+            if (dots[index]) {
+                dots[index].classList.add('active');
+            }
+
+            currentIndex = index;
+        };
+
+        // Arrow navigation
+        if (leftArrow) {
+            leftArrow.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent card click
+                const newIndex = (currentIndex - 1 + cards.length) % cards.length;
+                showCard(newIndex, 'prev');
+            });
+        }
+
+        if (rightArrow) {
+            rightArrow.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent card click
+                const newIndex = (currentIndex + 1) % cards.length;
+                showCard(newIndex, 'next');
+            });
+        }
+
+        // Click on card sides to navigate
+        cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Don't navigate if clicking on a link
+                if (e.target.tagName === 'A' || e.target.closest('a')) {
+                    return;
+                }
+
+                const cardRect = card.getBoundingClientRect();
+                const clickX = e.clientX - cardRect.left;
+                const cardWidth = cardRect.width;
+
+                // If clicked on left 40% of card, go to previous
+                if (clickX < cardWidth * 0.4) {
+                    const newIndex = (currentIndex - 1 + cards.length) % cards.length;
+                    showCard(newIndex, 'prev');
+                }
+                // If clicked on right 40% of card, go to next
+                else if (clickX > cardWidth * 0.6) {
+                    const newIndex = (currentIndex + 1) % cards.length;
+                    showCard(newIndex, 'next');
+                }
+                // Middle 20% does nothing (avoids accidental navigation)
+            });
+
+            // Visual feedback - show pointer cursor
+            card.style.cursor = 'pointer';
+        });
+
+        // Dot navigation
+        dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent card click
+                const index = parseInt(dot.dataset.index);
+                const direction = index > currentIndex ? 'next' : 'prev';
+                showCard(index, direction);
+            });
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                const newIndex = (currentIndex - 1 + cards.length) % cards.length;
+                showCard(newIndex, 'prev');
+            } else if (e.key === 'ArrowRight') {
+                const newIndex = (currentIndex + 1) % cards.length;
+                showCard(newIndex, 'next');
+            }
+        });
+
+        // Scroll/swipe support for mobile
+        let startX = 0;
+        let isDragging = false;
+
+        carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        }, { passive: true });
+
+        carousel.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', (e) => {
+            if (!isDragging) return;
+            isDragging = false;
+
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+
+            // Swipe threshold
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    // Swiped left, go to next
+                    const newIndex = (currentIndex + 1) % cards.length;
+                    showCard(newIndex, 'next');
+                } else {
+                    // Swiped right, go to previous
+                    const newIndex = (currentIndex - 1 + cards.length) % cards.length;
+                    showCard(newIndex, 'prev');
+                }
+            }
+        }, { passive: true });
+    }
+
 }
 
 // Hover effect for letter 'b' and 'B'
@@ -447,7 +771,7 @@ class MarkdownLoader {
 
         const bee = document.createElement('div');
         bee.className = 'flying-bee';
-        bee.textContent = '🐝';
+        bee.textContent = 'ðŸ';
         bee.style.left = startX + 'px';
         bee.style.top = startY + 'px';
 
@@ -501,8 +825,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('loaded');
     
     // Console message for developers
-    console.log('🌵 Portfolio site loaded successfully!');
-    console.log('🎉 Click the logo for a party surprise!');
+    console.log('ðŸŒµ Portfolio site loaded successfully!');
+    console.log('ðŸŽ‰ Click the logo for a party surprise!');
     console.log('Built with inspiration from astro-theme-cactus');
 });
 
