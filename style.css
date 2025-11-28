@@ -747,6 +747,21 @@ section.mb-16:hover {
     color: var(--color-global-bg);
 }
 
+/* PDF Download button - special styling */
+.project-links a.pdf-download-btn {
+    background-color: var(--color-accent);
+    color: var(--color-global-bg);
+    font-weight: 500;
+    border: 2px solid var(--color-accent);
+}
+
+.project-links a.pdf-download-btn:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px var(--color-shadow);
+}
+
 /* Contact links */
 .contact-links {
     display: flex;

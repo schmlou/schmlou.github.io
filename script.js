@@ -527,11 +527,12 @@ class MarkdownLoader {
                                 ${project.tags.map(tag => `<span class="tag tag-${tag.toLowerCase().replace(/\s+/g, '-')}">${tag}</span>`).join('')}
                             </div>
                         ` : ''}
-                        ${project.links && (project.links.paper || project.links.code || project.links.demo) ? `
+                        ${project.links && (project.links.paper || project.links.code || project.links.demo || project.links.pdf) ? `
                             <div class="project-links">
                                 ${project.links.paper ? `<a href="${project.links.paper}" target="_blank" rel="noopener noreferrer">Paper</a>` : ''}
                                 ${project.links.code ? `<a href="${project.links.code}" target="_blank" rel="noopener noreferrer">Code</a>` : ''}
                                 ${project.links.demo ? `<a href="${project.links.demo}" target="_blank" rel="noopener noreferrer">Demo</a>` : ''}
+                                ${project.links.pdf ? `<a href="${project.links.pdf}" class="pdf-download-btn" download>📄 Download PDF</a>` : ''}
                             </div>
                         ` : ''}
                     </div>
@@ -744,11 +745,12 @@ class MarkdownLoader {
                                 ${project.tags.map(tag => `<span class="tag tag-${tag.toLowerCase().replace(/\s+/g, '-')}">${tag}</span>`).join('')}
                             </div>
                         ` : ''}
-                        ${project.links && (project.links.paper || project.links.code || project.links.demo) ? `
+                        ${project.links && (project.links.paper || project.links.code || project.links.demo || project.links.pdf) ? `
                             <div class="project-links">
                                 ${project.links.paper ? `<a href="${project.links.paper}" target="_blank" rel="noopener noreferrer">Paper</a>` : ''}
                                 ${project.links.code ? `<a href="${project.links.code}" target="_blank" rel="noopener noreferrer">Code</a>` : ''}
                                 ${project.links.demo ? `<a href="${project.links.demo}" target="_blank" rel="noopener noreferrer">Demo</a>` : ''}
+                                ${project.links.pdf ? `<a href="${project.links.pdf}" class="pdf-download-btn" download>📄 Download PDF</a>` : ''}
                             </div>
                         ` : ''}
                     </div>

@@ -969,12 +969,26 @@ eP_self/
   "tags": ["tag1", "tag2"],
   "links": {
     "paper": "https://...",
-    "code": "https://github.com/..."
+    "code": "https://github.com/...",
+    "demo": "https://...",
+    "pdf": "assets/projects/project-paper.pdf"
   }
 }
 ```
 
+**Link Types:**
+- `paper` - External link to published paper
+- `code` - GitHub repository or code link
+- `demo` - Live demo or website link
+- `pdf` - Local PDF file for download (shows as "📄 Download PDF" button)
+
 **Common Tags:** `"python"`, `"gis"`, `"machine-learning"`, `"remote-sensing"`
+
+**PDF Downloads:**
+To add a downloadable PDF to a project:
+1. Place PDF in `assets/projects/` folder (e.g., `assets/projects/wildfire-paper.pdf`)
+2. Add `"pdf": "assets/projects/wildfire-paper.pdf"` to the project's links
+3. The button will automatically appear with special styling
 
 ---
 

@@ -9,7 +9,8 @@
     "tags": ["machine-learning", "remote-sensing", "gis"],
     "links": {
       "paper": "https://example.com/wildfire-paper.pdf",
-      "code": "https://github.com/yourusername/wildfire-risk"
+      "code": "https://github.com/yourusername/wildfire-risk",
+      "pdf": "assets/projects/wildfire-risk-paper.pdf"
     }
   },
   {

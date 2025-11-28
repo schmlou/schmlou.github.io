@@ -46,6 +46,7 @@
     - [ ] Real GitHub/demo links (or remove link field if none)
     - [ ] Technologies used
     - [ ] Your role and key achievements
+    - [ ] Add PDF downloads if available (place PDFs in `assets/projects/` folder)
 - [ ] Ensure projects are complete and showcase your best work
 
 ## 🎨 Assets & Media
@@ -71,8 +72,14 @@
 - [ ] Add project screenshots/thumbnails
   - [ ] Create screenshots for each project
   - [ ] Optimize images (recommend < 500KB each)
-  - [ ] Save in `static/projects/` folder
+  - [ ] Save in `assets/projects/` folder
   - [ ] Reference in `projects.json` if you want to display them
+
+- [ ] Add project PDFs (optional)
+  - [ ] Export project papers/documentation as PDFs
+  - [ ] Place in `assets/projects/` folder (e.g., `wildfire-paper.pdf`)
+  - [ ] Add to `projects.json` under `links.pdf`
+  - [ ] "📄 Download PDF" button will appear automatically
 
 ## 🧪 Testing & Quality Assurance
 
