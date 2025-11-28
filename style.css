@@ -1584,3 +1584,128 @@ html {
         min-height: 500px;
     }
 }
+
+/* ============================================
+   Projects List View (for projects.html page)
+   ============================================ */
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-list-item {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px var(--color-shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.project-list-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px var(--color-shadow);
+    border-color: var(--color-accent);
+}
+
+/* Project list image */
+.project-list-image {
+    width: 100%;
+    max-width: 300px;
+    flex-shrink: 0;
+}
+
+.project-list-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Project list content */
+.project-list-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.project-list-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-accent-2);
+    line-height: 1.3;
+}
+
+.project-list-title a {
+    color: var(--color-accent-2);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.project-list-title a:hover {
+    color: var(--color-accent);
+}
+
+.project-list-year {
+    display: inline-block;
+    background: var(--color-accent);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.project-list-venue {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+.project-list-authors {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
+
+.project-list-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-global-text);
+    margin: 0.5rem 0 0 0;
+}
+
+/* Desktop layout - side by side */
+@media (min-width: 768px) {
+    .project-list-item {
+        flex-direction: row;
+    }
+
+    .project-list-image {
+        max-width: 250px;
+    }
+}
+
+/* Larger screens - more space */
+@media (min-width: 1024px) {
+    .project-list-item {
+        padding: 2rem;
+    }
+
+    .project-list-image {
+        max-width: 300px;
+    }
+
+    .project-list-title {
+        font-size: 1.75rem;
+    }
+}

@@ -334,11 +334,18 @@ class MarkdownLoader {
         const contentElement = document.getElementById(`${section}-content`);
         if (!contentElement) return;
 
+        // Determine which file to load based on current page
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const isDetailPage = currentPage.includes(section + '.html');
+
+        // Use -full.md for detail pages, regular .md for home page
+        const fileName = isDetailPage ? `${section}-full.md` : `${section}.md`;
+
         // Try multiple path strategies for better compatibility
         const pathsToTry = [
-            `./static/${section}.md`,    // Relative to static directory
-            `static/${section}.md`,      // Direct relative path
-            `/static/${section}.md`      // Absolute from root (for some GitHub Pages setups)
+            `./static/${fileName}`,    // Relative to static directory
+            `static/${fileName}`,      // Direct relative path
+            `/static/${fileName}`      // Absolute from root (for some GitHub Pages setups)
         ];
 
         let lastError = null;
@@ -445,8 +452,15 @@ class MarkdownLoader {
                 const response = await fetch(fullPath);
                 if (response.ok) {
                     const projects = await response.json();
-                    const html = this.renderProjects(projects);
+
+                    // Determine which page we're on
+                    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                    const isProjectsPage = currentPage === 'projects.html';
+
+                    // Render differently based on page
+                    const html = isProjectsPage ? this.renderProjectsList(projects) : this.renderProjects(projects);
                     contentElement.innerHTML = html;
+
                     // Apply hover effect to new content
                     if (typeof window.applyBHoverEffect === 'function') {
                         window.applyBHoverEffect(contentElement);
@@ -689,6 +703,62 @@ class MarkdownLoader {
                 }
             }
         }, { passive: true });
+    }
+
+    renderProjectsList(projects) {
+        // List view for projects.html page - sorted by recency
+        if (!projects || projects.length === 0) {
+            return '<p>No projects available yet.</p>';
+        }
+
+        // Sort projects by year (most recent first)
+        const sortedProjects = [...projects].sort((a, b) => {
+            const yearA = parseInt(a.year) || 0;
+            const yearB = parseInt(b.year) || 0;
+            return yearB - yearA; // Descending order (newest first)
+        });
+
+        let html = '<div class="projects-list">';
+
+        sortedProjects.forEach((project, index) => {
+            html += `
+                <div class="project-list-item" data-index="${index}">
+                    ${project.image ? `
+                        <div class="project-list-image">
+                            <img src="${project.image}" alt="${project.title}" loading="lazy">
+                        </div>
+                    ` : ''}
+                    <div class="project-list-content">
+                        <h3 class="project-list-title">
+                            ${project.links?.paper ?
+                                `<a href="${project.links.paper}" class="projects-link" target="_blank" rel="noopener noreferrer">${project.title}</a>` :
+                                `<span class="projects-link">${project.title}</span>`
+                            }
+                        </h3>
+                        ${project.year ? `<div class="project-list-year">${project.year}</div>` : ''}
+                        ${project.venue ? `<div class="project-list-venue">${project.venue}</div>` : ''}
+                        ${project.authors ? `<div class="project-list-authors">${project.authors}</div>` : ''}
+                        ${project.description ? `<p class="project-list-description">${project.description}</p>` : ''}
+                        ${project.tags && project.tags.length > 0 ? `
+                            <div class="projects-tags">
+                                ${project.tags.map(tag => `<span class="tag tag-${tag.toLowerCase().replace(/\s+/g, '-')}">${tag}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                        ${project.links && (project.links.paper || project.links.code || project.links.demo) ? `
+                            <div class="project-links">
+                                ${project.links.paper ? `<a href="${project.links.paper}" target="_blank" rel="noopener noreferrer">Paper</a>` : ''}
+                                ${project.links.code ? `<a href="${project.links.code}" target="_blank" rel="noopener noreferrer">Code</a>` : ''}
+                                ${project.links.demo ? `<a href="${project.links.demo}" target="_blank" rel="noopener noreferrer">Demo</a>` : ''}
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        });
+
+        html += '</div>'; // Close projects-list
+
+        return html;
     }
 
 }
