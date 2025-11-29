@@ -356,7 +356,7 @@ class MarkdownLoader {
                 const response = await fetch(fullPath);
                 if (response.ok) {
                     const markdown = await response.text();
-                    const html = this.parseMarkdown(markdown);
+                    const html = this.parseMarkdown(markdown, section);
                     contentElement.innerHTML = html;
                     // Apply hover effect to new content
                     if (typeof window.applyBHoverEffect === 'function') {
@@ -390,12 +390,22 @@ class MarkdownLoader {
         }
     }
 
-    parseMarkdown(markdown) {
+    parseMarkdown(markdown, section) {
         let html = markdown;
 
         // Convert headers
         html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
-        html = html.replace(/^## (.*$)/gim, '<h2 class="title">$1</h2>');
+
+        // Make h2 titles clickable on the index page
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const isIndexPage = currentPage === 'index.html' || currentPage === '';
+
+        if (isIndexPage && section) {
+            html = html.replace(/^## (.*$)/gim, `<h2 class="title"><a href="${section}.html" class="title-link">$1</a></h2>`);
+        } else {
+            html = html.replace(/^## (.*$)/gim, '<h2 class="title">$1</h2>');
+        }
+
         html = html.replace(/^# (.*$)/gim, '<h1 class="title">$1</h1>');
 
         // Convert bold text
@@ -493,7 +503,13 @@ class MarkdownLoader {
     }
 
     renderProjects(projects) {
-        let html = '<h2 class="title">Projects</h2>';
+        // Make the title clickable on index page
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const isIndexPage = currentPage === 'index.html' || currentPage === '';
+
+        let html = isIndexPage
+            ? '<h2 class="title"><a href="projects.html" class="title-link">Projects</a></h2>'
+            : '<h2 class="title">Projects</h2>';
 
         if (!projects || projects.length === 0) {
             html += '<p>No projects available yet.</p>';

@@ -267,6 +267,19 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Make section titles clickable on index page */
+.title-link {
+    color: var(--color-accent-2);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.title-link:hover {
+    color: var(--color-accent-1);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 /* Section card styling - boxes around each major section */
 section.mb-16 {
     background-color: var(--color-card-bg);
