@@ -138,6 +138,13 @@
 
 ## 🎯 Optional Enhancements
 
+### Design & Styling
+- [ ] Review and refine colour choices for better visual harmony
+  - [ ] Review title colors (currently light blue)
+  - [ ] Review accent colors
+  - [ ] Check color contrast and accessibility
+  - [ ] Consider overall color scheme consistency
+
 ### Performance Optimization
 - [ ] Compress images further if needed
 - [ ] Consider adding loading animations
