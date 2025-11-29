@@ -112,7 +112,7 @@ html {
     --color-global-text: oklch(26.99% 0.0096 235.05);
     --color-link: oklch(55.44% 0.0431 185.69);
     --color-accent: #af67ff;
-    --color-accent-2: oklch(18.15% 0 0);
+    --color-accent-2: #4FC3F7;
     --color-quote: #af67ff;
     --color-border: #e5e7eb;
     --color-card-bg: rgba(255, 255, 255, 0.8);
@@ -125,7 +125,7 @@ html {
     --color-global-text: oklch(83.54% 0 264);
     --color-link: oklch(70.44% 0.1133 349);
     --color-accent: #5ff26b;
-    --color-accent-2: oklch(94.66% 0 0);
+    --color-accent-2: #81D4FA;
     --color-quote: oklch(94.8% 0.106 136.49);
     --color-border: #374151;
     --color-card-bg: rgba(31, 41, 55, 0.8);
@@ -261,7 +261,7 @@ body {
 
 /* Custom component styles */
 .title {
-    color: var(--color-accent-2);
+    color: var(--color-accent-2) !important;
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 2rem;
@@ -269,13 +269,13 @@ body {
 
 /* Make section titles clickable on index page */
 .title-link {
-    color: var(--color-accent-2);
+    color: var(--color-accent-2) !important;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .title-link:hover {
-    color: var(--color-accent-1);
+    color: var(--color-accent);
     text-decoration: underline;
     cursor: pointer;
 }
@@ -599,7 +599,7 @@ section.mb-16:hover {
 }
 
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-    color: var(--color-accent-2);
+    color: var(--color-accent-2) !important;
     font-weight: 600;
     line-height: 1.25;
     margin-top: 2rem;
