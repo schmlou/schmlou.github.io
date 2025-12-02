@@ -138,12 +138,12 @@
 
 ### GitHub Pages Deployment
 
-- [ ] Go to repository Settings on GitHub
-- [ ] Navigate to "Pages" section
-- [ ] Select "main" branch as source
-- [ ] Save and wait for deployment
-- [ ] Visit your site at `https://yourusername.github.io/your-repo-name/`
-- [ ] Test all functionality on live site
+- [x] Go to repository Settings on GitHub
+- [x] Navigate to "Pages" section
+- [x] Select "main" branch as source
+- [x] Save and wait for deployment
+- [x] Visit your site at `https://yourusername.github.io/your-repo-name/`
+- [x] Test all functionality on live site
 
 ### Post-Deployment
 
@@ -156,11 +156,11 @@
 
 ### Design & Styling
 
-- [ ] Review and refine colour choices for better visual harmony
-  - [ ] Review title colors (currently light blue)
-  - [ ] Review accent colors
-  - [ ] Check color contrast and accessibility
-  - [ ] Consider overall color scheme consistency
+- [x] Review and refine colour choices for better visual harmony
+  - [x] Review title colors (currently light blue)
+  - [x] Review accent colors
+  - [x] Check color contrast and accessibility
+  - [x] Consider overall color scheme consistency
 
 ### Performance Optimization
 
@@ -173,13 +173,6 @@
 - [ ] Add meta descriptions to all HTML pages
 - [ ] Add Open Graph tags for social media sharing
 - [ ] Consider adding Google Analytics (optional)
-
-### Content Additions
-
-- [ ] Add a blog section (if desired)
-- [ ] Add testimonials or recommendations
-- [ ] Include case studies for major projects
-- [ ] Add a contact form (requires backend or service like Formspree)
 
 ### Accessibility
 

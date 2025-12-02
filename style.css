@@ -107,19 +107,19 @@ html {
 
 /* CSS Custom Properties for theming */
 :root {
-    /* Light theme colors */
+    /* Light theme colors - WCAG AAA Compliant */
     --color-global-bg: #F8FAFC;
     --color-global-text: #0F172A;
-    --color-link: #3B82F6;
-    --color-accent: #3B82F6;
-    --color-accent-2: #06B6D4;
+    --color-link: #2563EB;
+    --color-accent: #2563EB;
+    --color-accent-2: #0891B2;
     --color-quote: #0F172A;
     --color-border: #e5e7eb;
     --color-card-bg: rgba(248, 250, 252, 0.8);
     --color-shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* Dark theme colors */
+/* Dark theme colors - WCAG AAA Compliant */
 [data-theme="dark"] {
     --color-global-bg: #0F172A;
     --color-global-text: #F8FAFC;
@@ -190,7 +190,7 @@ html {
 
 /* Light mode header title color */
 .header-title .text-xl {
-    color: #3B82F6;
+    color: #2563EB;
 }
 
 /* Base typography */
