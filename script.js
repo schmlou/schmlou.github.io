@@ -358,10 +358,10 @@ class MarkdownLoader {
                     const markdown = await response.text();
                     const html = this.parseMarkdown(markdown, section);
                     contentElement.innerHTML = html;
-                    // Apply hover effect to new content
-                    if (typeof window.applyBHoverEffect === 'function') {
-                        window.applyBHoverEffect(contentElement);
-                    }
+                    // Apply hover effect to new content (disabled)
+                    // if (typeof window.applyBHoverEffect === 'function') {
+                    //     window.applyBHoverEffect(contentElement);
+                    // }
                     console.log(`Successfully loaded ${section} from: ${fullPath}`);
                     return; // Success, exit early
                 } else {
@@ -384,10 +384,10 @@ class MarkdownLoader {
                 <p><small>Tried paths: ${pathsToTry.join(', ')}</small></p>
             </div>
         `;
-        // Apply hover effect to error content
-        if (typeof window.applyBHoverEffect === 'function') {
-            window.applyBHoverEffect(contentElement);
-        }
+        // Apply hover effect to error content (disabled)
+        // if (typeof window.applyBHoverEffect === 'function') {
+        //     window.applyBHoverEffect(contentElement);
+        // }
     }
 
     parseMarkdown(markdown, section) {
@@ -471,10 +471,10 @@ class MarkdownLoader {
                     const html = isProjectsPage ? this.renderProjectsList(projects) : this.renderProjects(projects);
                     contentElement.innerHTML = html;
 
-                    // Apply hover effect to new content
-                    if (typeof window.applyBHoverEffect === 'function') {
-                        window.applyBHoverEffect(contentElement);
-                    }
+                    // Apply hover effect to new content (disabled)
+                    // if (typeof window.applyBHoverEffect === 'function') {
+                    //     window.applyBHoverEffect(contentElement);
+                    // }
                     console.log(`Successfully loaded projects from: ${fullPath}`);
                     return; // Success, exit early
                 } else {
@@ -496,10 +496,10 @@ class MarkdownLoader {
                 <p><small>Last error: ${lastError?.message || 'Unknown error'}</small></p>
             </div>
         `;
-        // Apply hover effect to error content
-        if (typeof window.applyBHoverEffect === 'function') {
-            window.applyBHoverEffect(contentElement);
-        }
+        // Apply hover effect to error content (disabled)
+        // if (typeof window.applyBHoverEffect === 'function') {
+        //     window.applyBHoverEffect(contentElement);
+        // }
     }
 
     renderProjects(projects) {
@@ -900,11 +900,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     new LazyImageLoader();
     new MarkdownLoader();
-    
-    // Apply hover effect to all 'b' letters on initial content
-    if (typeof window.applyBHoverEffect === 'function') {
-        window.applyBHoverEffect(document.body);
-    }
+
+    // Apply hover effect to all 'b' letters on initial content (disabled)
+    // if (typeof window.applyBHoverEffect === 'function') {
+    //     window.applyBHoverEffect(document.body);
+    // }
 
     // Initialize party hat explosion feature
     new PartyHatExplosion();
