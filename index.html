@@ -28,13 +28,13 @@
             try {
                 // Try to get saved theme from browser's localStorage
                 var saved = localStorage.getItem('theme');
-                // Use saved theme if it's valid (dark or light), otherwise default to light
-                var theme = saved === 'dark' || saved === 'light' ? saved : 'light';
+                // Use saved theme if it's valid (dark or light), otherwise default to dark
+                var theme = saved === 'dark' || saved === 'light' ? saved : 'dark';
                 // Apply theme to the root HTML element via data attribute
                 document.documentElement.setAttribute('data-theme', theme);
             } catch (e) {
-                // If localStorage fails (some browsers block it), default to light theme
-                document.documentElement.setAttribute('data-theme', 'light');
+                // If localStorage fails (some browsers block it), default to dark theme
+                document.documentElement.setAttribute('data-theme', 'dark');
             }
         })();
     </script>
