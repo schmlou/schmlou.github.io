@@ -66,7 +66,7 @@ Replace `yourusername` with your GitHub username
 **LinkedIn** (Line ~10):
 
 ```html
-<a href="https://linkedin.com/in/yourusername" target="_blank"></a>
+<a href="https://www.linkedin.com/in/louisschmalisch/" target="_blank"></a>
 ```
 
 Replace `yourusername` with your LinkedIn username
@@ -82,7 +82,7 @@ Replace `yourusername` with your Twitter handle
 **Email** (Line ~22):
 
 ```html
-<a href="mailto:your.email@example.com"></a>
+<a href="mailto:louisschmalisch@gmail.com"></a>
 ```
 
 Replace with your actual email address

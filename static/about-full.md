@@ -7,29 +7,29 @@
     </svg>
   </a>
 
-  <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+  <a href="https://www.linkedin.com/in/louisschmalisch/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
     </svg>
   </a>
 
-  <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+  <!--<a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
     </svg>
-  </a>
+  </a>-->
 
-  <a href="mailto:your.email@example.com" style="text-decoration: none;">
+  <a href="mailto:louisschmalisch@gmail.com" style="text-decoration: none;">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
       <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
     </svg>
   </a>
 
-  <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+  <!--<a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
       <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 8.24c.487 0 .887-.4.887-.887s-.4-.887-.887-.887-.887.4-.887.887.4.887.887.887zm-.887 1.513v7.994h1.774v-7.994H6.482zm3.871 0v7.994h1.774v-4.306c0-.742.14-1.46.994-1.46.839 0 .951.78.951 1.505v4.261h1.774v-4.806c0-1.42-.306-2.508-1.962-2.508-.798 0-1.333.438-1.551.853h-.022v-.72h-1.758v-.013z"/>
     </svg>
-  </a>
+  </a> -->
 </div>
 
 I'm Louis Schmalisch, a Master's student at Z_GIS, University of Salzburg, specializing in Geographic Information Systems and remote sensing.

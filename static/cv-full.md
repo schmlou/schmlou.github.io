@@ -6,7 +6,7 @@
 
 Email: your.email@example.com
 Location: Salzburg, Austria
-[GitHub](https://github.com/schmlou) • [LinkedIn](https://linkedin.com/in/yourusername) • [ORCID](https://orcid.org/0000-0000-0000-0000)
+[GitHub](https://github.com/schmlou) • [LinkedIn](https://www.linkedin.com/in/louisschmalisch/)<!--• [ORCID](https://orcid.org/0000-0000-0000-0000)-->
 
 ---
 

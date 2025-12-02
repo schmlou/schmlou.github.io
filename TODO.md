@@ -4,11 +4,11 @@
 
 ### Social Links & Contact
 
-- [ ] Update social media links in all HTML files (index.html, about.html, projects.html, experience.html, cv.html)
-  - [ ] Replace `https://github.com/yourusername` with your actual GitHub URL
-  - [ ] Replace `https://linkedin.com/in/yourusername` with your actual LinkedIn URL
-  - [ ] Replace `mailto:your.email@example.com` with your actual email address
-  - [ ] Add any additional social links (Twitter, portfolio site, etc.)
+- [x] Update social media links in all HTML files (index.html, about.html, projects.html, experience.html, cv.html)
+  - [x] Replace `https://github.com/schmlou` with your actual GitHub URL
+  - [x] Replace `https://www.linkedin.com/in/louisschmalisch/` with your actual LinkedIn URL
+  - [x] Replace `mailto:louisschmalisch@gmail.com` with your actual email address
+  - [x] Add any additional social links (Twitter, portfolio site, etc.)
 
 ### About Section
 
