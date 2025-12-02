@@ -104,7 +104,7 @@
 
 - [ ] Test on different browsers (Chrome, Firefox, Safari, Edge)
 - [ ] Test responsive design on mobile devices
-- [ ] Verify dark/light theme toggle works on all pages
+- [x] Verify dark/light theme toggle works on all pages
 - [ ] Check that navigation works correctly
 - [ ] Verify projects list shows all projects sorted by year
 - [ ] Test that detail pages (about.html, experience.html, cv.html) load full content
@@ -176,7 +176,7 @@
 
 ### Accessibility
 
-- [ ] Verify color contrast meets WCAG standards
+- [x] Verify color contrast meets WCAG standards
 - [ ] Test with screen readers
 - [ ] Add alt text to all images
 - [ ] Ensure keyboard navigation works
