@@ -3,6 +3,7 @@
 ## 📝 Content Personalization
 
 ### Social Links & Contact
+
 - [ ] Update social media links in all HTML files (index.html, about.html, projects.html, experience.html, cv.html)
   - [ ] Replace `https://github.com/yourusername` with your actual GitHub URL
   - [ ] Replace `https://linkedin.com/in/yourusername` with your actual LinkedIn URL
@@ -10,6 +11,7 @@
   - [ ] Add any additional social links (Twitter, portfolio site, etc.)
 
 ### About Section
+
 - [ ] Edit `static/about.md` (home page brief version)
   - [ ] Write a short 2-3 sentence introduction about yourself
   - [ ] Highlight your key expertise or focus areas
@@ -19,6 +21,7 @@
   - [ ] Include any relevant personal or professional details
 
 ### Experience Section
+
 - [ ] Edit `static/experience.md` (home page brief version)
   - [ ] Add 2-3 most recent or relevant positions
   - [ ] Keep descriptions concise
@@ -29,6 +32,7 @@
   - [ ] Include certifications or awards if applicable
 
 ### CV Section
+
 - [ ] Edit `static/cv.md` (home page brief version)
   - [ ] Add summary of qualifications
   - [ ] List key skills
@@ -38,6 +42,7 @@
   - [ ] Format professionally
 
 ### Projects
+
 - [ ] Edit `static/projects.json`
   - [ ] Remove example projects
   - [ ] Add all your real projects with:
@@ -52,7 +57,9 @@
 ## 🎨 Assets & Media
 
 ### Required Assets
+
 - [ ] Add favicon
+
   - [ ] Create or find a favicon.ico file (16x16 or 32x32 pixels)
   - [ ] Place it in the root directory: `c:\Users\louis\Documents\eP_self\favicon.ico`
   - [ ] Verify it's linked in all HTML files (should already be present in `<head>`)
@@ -63,13 +70,16 @@
   - [ ] Verify download link works on CV page
 
 ### Optional Assets (Recommended)
+
 - [ ] Add profile photo
+
   - [ ] Take or select a professional photo
   - [ ] Optimize for web (recommend 400x400px, < 200KB)
   - [ ] Save as `static/profile-photo.jpg` or `static/profile-photo.png`
   - [ ] Update image reference in HTML if you want to use it
 
 - [ ] Add project screenshots/thumbnails
+
   - [ ] Create screenshots for each project
   - [ ] Optimize images (recommend < 500KB each)
   - [ ] Save in `assets/projects/` folder
@@ -84,12 +94,14 @@
 ## 🧪 Testing & Quality Assurance
 
 ### Content Review
+
 - [ ] Proofread all markdown files for typos and grammar
 - [ ] Check that all links open correctly
 - [ ] Verify email links work (mailto:)
 - [ ] Test all external links (GitHub, LinkedIn, project demos)
 
 ### Visual & Functional Testing
+
 - [ ] Test on different browsers (Chrome, Firefox, Safari, Edge)
 - [ ] Test responsive design on mobile devices
 - [ ] Verify dark/light theme toggle works on all pages
@@ -99,6 +111,7 @@
 - [ ] Verify home page shows brief content versions
 
 ### Cross-page Consistency
+
 - [ ] Verify logo is consistent across all pages
 - [ ] Check that footer content matches on all pages
 - [ ] Ensure navigation menu works from every page
@@ -107,6 +120,7 @@
 ## 🚀 Deployment
 
 ### GitHub Setup
+
 - [ ] Create GitHub account (if you don't have one)
 - [ ] Create new repository for your ePortfolio
 - [ ] Initialize git in your project (if not already done)
@@ -123,6 +137,7 @@
   ```
 
 ### GitHub Pages Deployment
+
 - [ ] Go to repository Settings on GitHub
 - [ ] Navigate to "Pages" section
 - [ ] Select "main" branch as source
@@ -131,6 +146,7 @@
 - [ ] Test all functionality on live site
 
 ### Post-Deployment
+
 - [ ] Update README.md with live site URL
 - [ ] Share your ePortfolio link
 - [ ] Add site URL to your resume/CV
@@ -139,6 +155,7 @@
 ## 🎯 Optional Enhancements
 
 ### Design & Styling
+
 - [ ] Review and refine colour choices for better visual harmony
   - [ ] Review title colors (currently light blue)
   - [ ] Review accent colors
@@ -146,22 +163,26 @@
   - [ ] Consider overall color scheme consistency
 
 ### Performance Optimization
+
 - [ ] Compress images further if needed
 - [ ] Consider adding loading animations
 - [ ] Test page load speed
 
 ### SEO & Metadata
+
 - [ ] Add meta descriptions to all HTML pages
 - [ ] Add Open Graph tags for social media sharing
 - [ ] Consider adding Google Analytics (optional)
 
 ### Content Additions
+
 - [ ] Add a blog section (if desired)
 - [ ] Add testimonials or recommendations
 - [ ] Include case studies for major projects
 - [ ] Add a contact form (requires backend or service like Formspree)
 
 ### Accessibility
+
 - [ ] Verify color contrast meets WCAG standards
 - [ ] Test with screen readers
 - [ ] Add alt text to all images
@@ -170,11 +191,13 @@
 ## 📋 Quick Reference Files
 
 - **Content Files**: All located in `static/` folder
+
   - Short versions: `about.md`, `experience.md`, `cv.md`
   - Full versions: `about-full.md`, `experience-full.md`, `cv-full.md`
   - Projects: `projects.json`
 
 - **HTML Pages**: All in root directory
+
   - `index.html` - Home/landing page
   - `about.html` - Full about page
   - `experience.html` - Full experience page
@@ -188,6 +211,7 @@
 ## ✅ Completion Checklist
 
 Once you've completed all the above:
+
 - [ ] All content is personalized with real information
 - [ ] All links are updated and working
 - [ ] All required assets are added

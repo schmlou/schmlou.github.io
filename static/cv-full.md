@@ -1,11 +1,12 @@
 ## Curriculum Vitae
 
 ### Louis Schmalisch
+
 **Geoinformatics Master's Student**
 
 Email: your.email@example.com
 Location: Salzburg, Austria
-[GitHub](https://github.com/yourusername) • [LinkedIn](https://linkedin.com/in/yourusername) • [ORCID](https://orcid.org/0000-0000-0000-0000)
+[GitHub](https://github.com/schmlou) • [LinkedIn](https://linkedin.com/in/yourusername) • [ORCID](https://orcid.org/0000-0000-0000-0000)
 
 ---
 
@@ -48,12 +49,14 @@ Location: Salzburg, Austria
 ## Technical Skills
 
 ### GIS & Remote Sensing
+
 - **Desktop GIS:** QGIS, ArcGIS Pro, GRASS GIS
 - **Remote Sensing:** ENVI, ERDAS Imagine, SNAP, Google Earth Engine
 - **Spatial Databases:** PostGIS, SpatiaLite
 - **Cartography:** Adobe Illustrator, Inkscape, QGIS Print Composer
 
 ### Programming & Data Science
+
 - **Languages:** Python, R, JavaScript, SQL
 - **Python Libraries:** GDAL, GeoPandas, Rasterio, Shapely, Folium, Scikit-learn
 - **R Packages:** sf, raster, tmap, leaflet, ggplot2
@@ -61,6 +64,7 @@ Location: Salzburg, Austria
 - **Version Control:** Git, GitHub
 
 ### Data Processing & Analysis
+
 - Cloud Computing: Google Earth Engine, AWS
 - Database Management: PostgreSQL, MySQL
 - Statistical Analysis: SPSS, R, Python
@@ -71,6 +75,7 @@ Location: Salzburg, Austria
 ## Research Experience
 
 ### Graduate Research Assistant
+
 **Z_GIS, University of Salzburg** • 2024 - Present
 
 - Conducting research on [specific research topic]
@@ -79,6 +84,7 @@ Location: Salzburg, Austria
 - Contributing to grant proposals and research publications
 
 ### Undergraduate Research Assistant
+
 **[University/Department]** • 2021 - 2022
 
 - Assisted with [specific research project]
@@ -91,12 +97,15 @@ Location: Salzburg, Austria
 ## Publications & Presentations
 
 ### Peer-Reviewed Publications
-1. **[Author names]** ([Year]). "[Paper title]." *Journal Name*, Volume(Issue), pages. DOI: [link]
+
+1. **[Author names]** ([Year]). "[Paper title]." _Journal Name_, Volume(Issue), pages. DOI: [link]
 
 ### Conference Presentations
+
 1. **Schmalisch, L.** ([Year]). "[Presentation title]." Presented at [Conference Name], [Location].
 
 ### Technical Reports
+
 1. **[Report title]** - [Organization/Client], [Year]
 
 ---
@@ -104,6 +113,7 @@ Location: Salzburg, Austria
 ## Professional Experience
 
 ### GIS Analyst Intern
+
 **[Company/Organization Name]** • Summer 2023
 
 - Performed spatial analysis for environmental consulting projects
@@ -112,6 +122,7 @@ Location: Salzburg, Austria
 - Collaborated with multidisciplinary teams on project delivery
 
 ### Student Teaching Assistant
+
 **University of Salzburg** • 2022 - 2023
 
 - Supported instruction in GIS and spatial analysis courses
@@ -124,6 +135,7 @@ Location: Salzburg, Austria
 ## Awards & Honors
 
 - **[Award Name]** - [Issuing Organization], [Year]
+
   - [Brief description of award criteria or significance]
 
 - **[Scholarship Name]** - [University/Organization], [Year]
@@ -159,15 +171,18 @@ Location: Salzburg, Austria
 ### Selected Academic Projects
 
 **[Project Name]**
+
 - Developed [brief description]
 - Technologies: [list key technologies]
 - [Link to project if available]
 
 **[Project Name]**
+
 - Analyzed [brief description]
 - Outcomes: [key findings or results]
 
 ### Open Source Contributions
+
 - Contributor to [Project Name] - [Brief description of contribution]
 - Developed [Tool/Plugin Name] for [Purpose]
 
@@ -176,6 +191,7 @@ Location: Salzburg, Austria
 ## Volunteer Experience
 
 ### [Organization Name]
+
 **[Role]** • [Dates]
 
 - [Description of volunteer activities]

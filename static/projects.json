@@ -9,7 +9,7 @@
     "tags": ["machine-learning", "remote-sensing", "gis"],
     "links": {
       "paper": "https://example.com/wildfire-paper.pdf",
-      "code": "https://github.com/yourusername/wildfire-risk",
+      "code": "https://github.com/schmlou/wildfire-risk",
       "pdf": "assets/projects/wildfire-risk-paper.pdf"
     }
   },
@@ -35,7 +35,7 @@
     "year": 2025,
     "tags": ["deep-learning", "remote-sensing", "classification"],
     "links": {
-      "code": "https://github.com/yourusername/land-cover-dl"
+      "code": "https://github.com/schmlou/land-cover-dl"
     }
   }
 ]
