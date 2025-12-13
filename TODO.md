@@ -64,19 +64,19 @@
   - [ ] Place it in the root directory: `c:\Users\louis\Documents\eP_self\favicon.ico`
   - [ ] Verify it's linked in all HTML files (should already be present in `<head>`)
 
-- [ ] Add CV PDF
-  - [ ] Export your CV as a PDF file
-  - [ ] Place it in `static/` folder as `cv.pdf`
-  - [ ] Verify download link works on CV page
+- [x] Add CV PDF
+  - [x] Export your CV as a PDF file
+  - [x] Place it in `static/` folder as `cv.pdf`
+  - [x] Verify download link works on CV page
 
 ### Optional Assets (Recommended)
 
-- [ ] Add profile photo
+- [x] Add profile photo
 
-  - [ ] Take or select a professional photo
-  - [ ] Optimize for web (recommend 400x400px, < 200KB)
-  - [ ] Save as `static/profile-photo.jpg` or `static/profile-photo.png`
-  - [ ] Update image reference in HTML if you want to use it
+  - [x] Take or select a professional photo
+  - [x] Optimize for web (recommend 400x400px, < 200KB)
+  - [x] Save as `static/profile-photo.jpg` or `static/profile-photo.png`
+  - [x] Update image reference in HTML if you want to use it
 
 - [ ] Add project screenshots/thumbnails
 
@@ -112,10 +112,10 @@
 
 ### Cross-page Consistency
 
-- [ ] Verify logo is consistent across all pages
-- [ ] Check that footer content matches on all pages
-- [ ] Ensure navigation menu works from every page
-- [ ] Verify theme preference persists across page navigation
+- [x] Verify logo is consistent across all pages
+- [x] Check that footer content matches on all pages
+- [x] Ensure navigation menu works from every page
+- [x] Verify theme preference persists across page navigation
 
 ## 🚀 Deployment
 
