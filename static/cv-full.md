@@ -2,10 +2,10 @@
 
 ### Louis Schmalisch
 
-**Geoinformatics Master's Student**
+**Master's Student in Applied Geoinformatics**
 
-Email: louisschmalisch@gmail.com
-Location: Salzburg, Austria
+Email: louisschmalisch@gmail.com<br>
+Location: Salzburg, Austria<br>
 [GitHub](https://github.com/schmlou) • [LinkedIn](https://www.linkedin.com/in/louisschmalisch/)<!--• [ORCID](https://orcid.org/0000-0000-0000-0000)-->
 
 ---

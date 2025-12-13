@@ -20,6 +20,7 @@
   </a>
 </div>
 
-I'm Louis Schmalisch, a Master's student at Z_GIS, University of Salzburg, specializing in Geographic Information Systems and remote sensing.
+Hi!<br>
+I'm Louis, a Master's student at Z_GIS, University of Salzburg, studying [Applied Geoinformatics](https://www.plus.ac.at/geoinformatik/education/agi/?lang=en).
 
-[Write 2-3 paragraphs about your background, interests, and what you're passionate about in GIS/geography] bla
+I'm originally from Mannheim, Germany and studied Geography as my Bachelors in Bayreuth, Baveria. Due to my interest in the Geospatial Domain,and also my love for the mountains, I Decided to study Applied Geoinformatic in Salzburg, Austria;)
