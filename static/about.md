@@ -1,5 +1,128 @@
 ## About Me
 
+<div style="display: flex; flex-direction: column; align-items: center; margin: 30px 0;">
+  <svg aria-label="Profile Picture" style="width: 150px; height: 150px; margin-bottom: 20px;" fill="none" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <g shape-rendering="crispEdges">
+      <!-- Green blocks forming an 'L' shape -->
+      <g>
+        <use href="#SvgjsSymbol1009" x="50" y="600" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="50" y="600" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="50" y="600" fill="#0cbe3b"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="150" y="550" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="150" y="550" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="150" y="550" fill="#0cbe3b"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="250" y="500" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="250" y="500" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="250" y="500" fill="#0cbe3b"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="350" y="450" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="350" y="450" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="350" y="450" fill="#0cbe3b"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="350" y="350" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="350" y="350" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="350" y="350" fill="#0cbe3b"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="50" y="500" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="50" y="500" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="50" y="500" fill="#0cbe3b"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="250" y="400" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="250" y="400" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="250" y="400" fill="#0cbe3b"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="250" y="300" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="250" y="300" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="250" y="300" fill="#0cbe3b"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="250" y="200" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="250" y="200" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="250" y="200" fill="#0cbe3b"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="350" y="250" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="350" y="250" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="350" y="250" fill="#0cbe3b"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="350" y="150" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="350" y="150" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="350" y="150" fill="#0cbe3b"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="450" y="100" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="450" y="100" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="450" y="100" fill="#0cbe3b"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="550" y="50" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="550" y="50" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="550" y="50" fill="#0cbe3b"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="550" y="150" fill="#5ff26b"></use>
+        <use href="#SvgjsSymbol1010" x="550" y="150" fill="#98ff9c"></use>
+        <use href="#SvgjsSymbol1011" x="550" y="150" fill="#0cbe3b"></use>
+      </g>
+      <!-- Purple blocks forming an 'S' shape -->
+      <g>
+        <use href="#SvgjsSymbol1009" x="550" y="150" fill="#af67ff"></use>
+        <use href="#SvgjsSymbol1010" x="550" y="150" fill="#e497ff"></use>
+        <use href="#SvgjsSymbol1011" x="550" y="150" fill="#7b38cb"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="350" y="450" fill="#af67ff"></use>
+        <use href="#SvgjsSymbol1010" x="350" y="450" fill="#e497ff"></use>
+        <use href="#SvgjsSymbol1011" x="350" y="450" fill="#7b38cb"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="350" y="350" fill="#af67ff"></use>
+        <use href="#SvgjsSymbol1010" x="350" y="350" fill="#e497ff"></use>
+        <use href="#SvgjsSymbol1011" x="350" y="350" fill="#7b38cb"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="350" y="250" fill="#af67ff"></use>
+        <use href="#SvgjsSymbol1010" x="350" y="250" fill="#e497ff"></use>
+        <use href="#SvgjsSymbol1011" x="350" y="250" fill="#7b38cb"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="350" y="150" fill="#af67ff"></use>
+        <use href="#SvgjsSymbol1010" x="350" y="150" fill="#e497ff"></use>
+        <use href="#SvgjsSymbol1011" x="350" y="150" fill="#7b38cb"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="450" y="100" fill="#af67ff"></use>
+        <use href="#SvgjsSymbol1010" x="450" y="100" fill="#e497ff"></use>
+        <use href="#SvgjsSymbol1011" x="450" y="100" fill="#7b38cb"></use>
+      </g>
+      <g>
+        <use href="#SvgjsSymbol1009" x="550" y="50" fill="#af67ff"></use>
+        <use href="#SvgjsSymbol1010" x="550" y="50" fill="#e497ff"></use>
+        <use href="#SvgjsSymbol1011" x="550" y="50" fill="#7b38cb"></use>
+      </g>
+    </g>
+    <symbol id="SvgjsSymbol1009">
+      <polygon points="0,50 100,0 200,50 100,100"></polygon>
+    </symbol>
+    <symbol id="SvgjsSymbol1010">
+      <polygon points="0,50 100,100 100,200 0,150"></polygon>
+    </symbol>
+    <symbol id="SvgjsSymbol1011">
+      <polygon points="100,100 200,50 200,150 100,200"></polygon>
+    </symbol>
+  </svg>
+</div>
+
 <div style="display: flex; gap: 12px; margin: 20px 0;">
   <a href="https://github.com/schmlou" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">

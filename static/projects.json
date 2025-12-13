@@ -1,5 +1,5 @@
 [
-  {
+  /*{
     "title": "Wildfire Risk Assessment Using Machine Learning",
     "description": "Developed a predictive model for wildfire risk assessment integrating satellite imagery, weather data, and historical fire records. The model achieved 87% accuracy in predicting high-risk areas.",
     "image": "assets/wildfire-project.jpg",
@@ -37,5 +37,5 @@
     "links": {
       "code": "https://github.com/schmlou/land-cover-dl"
     }
-  }
+  }*/
 ]
