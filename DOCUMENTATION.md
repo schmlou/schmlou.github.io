@@ -1,1137 +1,603 @@
-# Complete Portfolio Website Documentation
+# ePortfolio Website Documentation
 
 **Louis Schmalisch's Portfolio Website**
-**Last Updated:** 2025-11-28
-**Version:** 1.0
+**Last Updated:** 2025-12-15
+**Version:** 2.0
 
 ---
 
 ## Table of Contents
 
-1. [Setup Guide](#setup-guide)
-2. [Content Loading System](#content-loading-system)
-3. [Projects List View](#projects-list-view)
-4. [Logo Management](#logo-management)
-5. [Code Explanation](#code-explanation)
-6. [Assets Needed](#assets-needed)
-7. [Quick Reference](#quick-reference)
-8. [Troubleshooting](#troubleshooting)
+1. [Project Overview](#project-overview)
+2. [Technology Stack](#technology-stack)
+3. [Project Structure](#project-structure)
+4. [Setup and Installation](#setup-and-installation)
+5. [Content Management](#content-management)
+6. [Features](#features)
+7. [Customization Guide](#customization-guide)
+8. [Deployment](#deployment)
+9. [Troubleshooting](#troubleshooting)
+10. [Development Notes](#development-notes)
 
 ---
 
-# Setup Guide
+## Project Overview
 
-## Initial Setup Checklist
+This is a modern, responsive portfolio website built with vanilla HTML, CSS, and JavaScript. The website showcases Louis Schmalisch's work as a Master's student at Z_GIS, University of Salzburg, specializing in Geographic Information Systems and remote sensing.
 
-### Required Actions
+### Key Features
 
-- [ ] **Update social media links** in `static/about.md`
-- [ ] **Add CV PDF** to `assets/Louis_Schmalisch_CV.pdf`
-- [ ] **Add favicon** to `assets/favicon.ico`
-
-### Optional Enhancements
-
-- [ ] Add profile photo (`assets/profile-photo.jpg`)
-- [ ] Add project screenshots to `assets/` folder
-- [ ] Customize colors in `style.css`
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- **Dark/Light Theme**: Toggle between themes with localStorage persistence
+- **Dynamic Content Loading**: Markdown-based content system for easy updates
+- **Project Carousel**: Interactive carousel for showcasing projects on the home page
+- **Project List View**: Detailed list view sorted by year on the projects page
+- **Profile Photo**: Circular profile image in the header
+- **Social Media Integration**: GitHub, LinkedIn, and email links
+- **Smooth Scrolling**: Enhanced navigation experience
+- **Interactive Effects**: Party hat explosion animation on logo click
 
 ---
 
-## Social Media Icons
+## Technology Stack
 
-### Location
+### Frontend
+- **HTML5**: Semantic markup for content structure
+- **CSS3**: Modern styling with CSS custom properties (variables) for theming
+- **JavaScript (ES6+)**: Vanilla JS with classes for functionality
 
-`static/about.md` - Top of the about section
+### Content Format
+- **Markdown**: `.md` files for text content (parsed client-side)
+- **JSON**: `projects.json` for project data
 
-### Current Icons
+### Fonts
+- **JetBrains Mono**: Google Font for consistent typography
 
-- 🐙 GitHub
-- 💼 LinkedIn
-- 🐦 Twitter/X
-- 📧 Email
-- 🔬 ORCID (academic publications)
+### Version Control
+- **Git**: Version control system
+- **GitHub**: Repository hosting and GitHub Pages deployment
 
-### How to Update
+---
 
-Edit `static/about.md` and replace placeholder URLs:
+## Project Structure
 
-**GitHub** (Line ~4):
-
-```html
-<a href="https://github.com/schmlou" target="_blank"></a>
 ```
-
-Replace `yourusername` with your GitHub username
-
-**LinkedIn** (Line ~10):
-
-```html
-<a href="https://www.linkedin.com/in/louisschmalisch/" target="_blank"></a>
-```
-
-Replace `yourusername` with your LinkedIn username
-
-**Twitter/X** (Line ~16):
-
-```html
-<a href="https://twitter.com/yourusername" target="_blank"></a>
-```
-
-Replace `yourusername` with your Twitter handle
-
-**Email** (Line ~22):
-
-```html
-<a href="mailto:louisschmalisch@gmail.com"></a>
-```
-
-Replace with your actual email address
-
-**ORCID** (Line ~28):
-
-```html
-<a href="https://orcid.org/0000-0000-0000-0000" target="_blank"></a>
-```
-
-Replace with your ORCID ID (or delete this entire `<a>...</a>` block if you don't have one)
-
-### Remove an Icon
-
-To remove a social media icon, delete the entire `<a>...</a>` block for that platform (from `<a href=...>` to `</a>`).
-
-### Add More Icons
-
-**ResearchGate:**
-
-```html
-<a
-  href="https://researchgate.net/profile/Your-Name"
-  target="_blank"
-  style="text-decoration: none;"
->
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-    <path
-      d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68..."
-    />
-  </svg>
-</a>
-```
-
-**Google Scholar:**
-
-```html
-<a
-  href="https://scholar.google.com/citations?user=YOUR_ID"
-  target="_blank"
-  style="text-decoration: none;"
->
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94..." />
-  </svg>
-</a>
+ePortfolio/
+├── index.html              # Main landing page (all sections)
+├── about.html              # About detail page
+├── projects.html           # Projects list page
+├── experience.html         # Experience detail page
+├── cv.html                 # CV detail page
+├── style.css               # All visual styling and themes
+├── script.js               # JavaScript functionality
+├── LICENSE                 # MIT License
+├── README.md               # Project README
+├── DOCUMENTATION.md        # This file
+├── CNAME                   # Custom domain configuration
+│
+├── static/                 # Content files
+│   ├── about.md            # Short about content (home page)
+│   ├── about-full.md       # Full about content (about page)
+│   ├── experience.md       # Short experience (home page)
+│   ├── experience-full.md  # Full experience (experience page)
+│   ├── cv.md               # Short CV (home page)
+│   ├── cv-full.md          # Full CV (cv page)
+│   └── projects.json       # Projects data (all pages)
+│
+└── assets/                 # Static assets
+    ├── favicon.ico         # Browser tab icon
+    ├── profile-photo.jpg   # Profile photo for header
+    ├── Louis_Schmalisch_CV.pdf  # CV download file
+    └── projects/           # Project-related files
+        └── *.pdf           # Project papers/documents
 ```
 
 ---
 
-## CV Download Button
+## Setup and Installation
 
-### Location
+### Prerequisites
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- A text editor (VS Code, Sublime Text, etc.)
+- Git (for version control)
 
-`static/cv.md` - At the bottom of the CV section
+### Local Development
 
-### Setup Steps
-
-1. **Export your CV as PDF**
-
-   - Use Word, Google Docs, LaTeX, etc.
-   - Export/Save as PDF
-
-2. **Name the file**
-
-   - Exact name: `Louis_Schmalisch_CV.pdf`
-
-3. **Save location**
-
-   - Place in: `assets/Louis_Schmalisch_CV.pdf`
-
-4. **Test**
-   - Open your website
-   - Navigate to CV section
-   - Click "📄 Download Full CV (PDF)"
-   - PDF should download
-
-### Customize Button Text
-
-Edit `static/cv.md` (bottom of file):
-
-```html
-<a href="assets/Louis_Schmalisch_CV.pdf" download="Louis_Schmalisch_CV.pdf">
-  📄 Download Full CV (PDF)
-</a>
-```
-
-Change text between `>` and `</a>` to customize button label.
-
----
-
-# Content Loading System
-
-## Overview
-
-Your portfolio website automatically loads different content based on which page visitors are viewing:
-
-- **Home page (index.html)**: Shows brief summaries
-- **Detail pages** (about.html, experience.html, cv.html): Shows full detailed content
-
----
-
-## How It Works
-
-### Visual Flow Diagram
-
-```
-User visits a page
-       ↓
-JavaScript detects: "Which page am I on?"
-       ↓
-   ┌───────────────────────┐
-   │  Is this index.html?  │
-   └───────────────────────┘
-       ↓            ↓
-     YES           NO
-       ↓            ↓
-  Load .md     Load -full.md
-  (short)      (detailed)
-```
-
-### Step-by-Step Process
-
-1. **User visits a page** (e.g., about.html)
-2. **Page loads** and includes script.js
-3. **Script runs** and creates a `MarkdownLoader` object
-4. **For each section** (about, experience, cv):
-   - Script checks: "What page am I on?"
-   - If on index.html → load `section.md`
-   - If on about.html → load `about-full.md`
-   - If on experience.html → load `experience-full.md`
-   - If on cv.html → load `cv-full.md`
-5. **Content is loaded** and displayed
-
----
-
-## File Structure
-
-### Static Folder Organization
-
-```
-static/
-├── about.md              ← Short version (for home page)
-├── about-full.md         ← Detailed version (for about.html)
-├── experience.md         ← Short version (for home page)
-├── experience-full.md    ← Detailed version (for experience.html)
-├── cv.md                 ← Short version (for home page)
-├── cv-full.md            ← Detailed version (for cv.html)
-└── projects.json         ← Projects data (all pages)
-```
-
-### Page Mapping
-
-| Page File       | Content Loaded     | File Used          |
-| --------------- | ------------------ | ------------------ |
-| index.html      | About section      | about.md           |
-| index.html      | Experience section | experience.md      |
-| index.html      | CV section         | cv.md              |
-| about.html      | About section      | about-full.md      |
-| experience.html | Experience section | experience-full.md |
-| cv.html         | CV section         | cv-full.md         |
-
----
-
-## The Code Explained
-
-### Modified: script.js (Lines 333-349)
-
-#### 1. Get Current Page
-
-```javascript
-const currentPage = window.location.pathname.split("/").pop() || "index.html";
-```
-
-**What it does:**
-
-- Gets the filename from the URL
-- Example: `/about.html` → `"about.html"`
-- Defaults to `"index.html"` if empty
-
-#### 2. Check if Detail Page
-
-```javascript
-const isDetailPage = currentPage.includes(section + ".html");
-```
-
-**What it does:**
-
-- Checks if current page matches the section
-- Example: `"about.html".includes("about.html")` → `true`
-- Example: `"index.html".includes("about.html")` → `false`
-
-#### 3. Choose File
-
-```javascript
-const fileName = isDetailPage ? `${section}-full.md` : `${section}.md`;
-```
-
-**What it does:**
-
-- If detail page → load `-full.md` version
-- If home page → load regular `.md` version
-
-**Examples:**
-
-```javascript
-// On about.html loading "about" section
-fileName = "about-full.md" ✓
-
-// On index.html loading "about" section
-fileName = "about.md" ✓
-```
-
----
-
-## How to Edit Content
-
-### For Home Page (Short Summaries)
-
-Edit these files for brief content on index.html:
-
-- `static/about.md` - 2-3 paragraphs
-- `static/experience.md` - Key highlights only
-- `static/cv.md` - Brief overview
-
-**Example - static/about.md:**
-
-```markdown
-## About Me
-
-I'm Louis Schmalisch, a Master's student at Z_GIS, University of Salzburg.
-
-I specialize in GIS and remote sensing, with a passion for environmental monitoring.
-```
-
-### For Detail Pages (Full Content)
-
-Edit these files for detailed content on dedicated pages:
-
-- `static/about-full.md` - Complete background, interests, skills
-- `static/experience-full.md` - Full job details, education
-- `static/cv-full.md` - Complete CV with all details
-
-**Example - static/about-full.md:**
-
-```markdown
-## About Me
-
-I'm Louis Schmalisch, a Master's student at Z_GIS, University of Salzburg.
-
-## Background
-
-My journey into geoinformatics began during my undergraduate studies...
-[Much more detailed content here]
-
-## Research Interests
-
-I'm particularly interested in:
-
-- Environmental monitoring
-- Machine learning in GIS
-- Urban planning
-  [etc...]
-```
-
----
-
-# Projects List View
-
-## Overview
-
-The projects section displays differently based on page:
-
-- **Home page (index.html)**: Carousel view (swipeable cards)
-- **Projects page (projects.html)**: List view (sorted by year, newest first)
-
----
-
-## Visual Comparison
-
-### Home Page (Carousel)
-
-```
-┌─────────────────────────────────┐
-│     [Project Card - Swipeable]  │
-│                                 │
-│         ← • • • →               │
-└─────────────────────────────────┘
-```
-
-One project at a time
-
-### Projects Page (List)
-
-```
-┌─────────────────────────────────┐
-│  2024 | Project Title 1         │
-│        Description...           │
-└─────────────────────────────────┘
-┌─────────────────────────────────┐
-│  2023 | Project Title 2         │
-│        Description...           │
-└─────────────────────────────────┘
-```
-
-All projects visible, sorted by year
-
----
-
-## How Projects List Works
-
-### 1. Page Detection
-
-**Location:** script.js lines 456-458
-
-```javascript
-const currentPage = window.location.pathname.split("/").pop() || "index.html";
-const isProjectsPage = currentPage === "projects.html";
-```
-
-### 2. Conditional Rendering
-
-**Location:** script.js line 461
-
-```javascript
-const html = isProjectsPage
-  ? this.renderProjectsList(projects)
-  : this.renderProjects(projects);
-```
-
-- If on projects.html → show list
-- Otherwise → show carousel
-
-### 3. Sorting by Year
-
-**Location:** script.js lines 714-719
-
-```javascript
-const sortedProjects = [...projects].sort((a, b) => {
-  const yearA = parseInt(a.year) || 0;
-  const yearB = parseInt(b.year) || 0;
-  return yearB - yearA; // Newest first
-});
-```
-
-**How sorting works:**
-
-- Converts year to number
-- Defaults to 0 if missing
-- Sorts descending (2024, 2023, 2022...)
-
----
-
-## Projects Data Format
-
-### JSON Structure
-
-Your `static/projects.json` should follow this format:
-
-```json
-[
-  {
-    "title": "Project Title",
-    "year": 2024,
-    "venue": "Conference Name",
-    "authors": "Author 1, Author 2",
-    "description": "Project description...",
-    "image": "path/to/image.jpg",
-    "tags": ["GIS", "Remote Sensing", "Python"],
-    "links": {
-      "paper": "https://...",
-      "code": "https://github.com/...",
-      "demo": "https://..."
-    }
-  }
-]
-```
-
-### Important Fields
-
-- **year**: Required for sorting (use number, not string)
-- **title**: Project name
-- **venue**: Where published/presented
-- **authors**: Author names
-- **description**: Brief summary
-- **image**: Path to project image
-- **tags**: Array of technology/topic tags
-- **links**: Object with paper/code/demo URLs
-
----
-
-## CSS Styling for Projects List
-
-### List Container
-
-**Location:** style.css lines 1592-1597
-
-```css
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-```
-
-### Project Item Card
-
-**Location:** style.css lines 1599-1609
-
-```css
-.project-list-item {
-  background: var(--color-card-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px var(--color-shadow);
-  transition: all 0.3s ease;
-  display: flex;
-  gap: 1.5rem;
-  flex-direction: column; /* Mobile: vertical */
-}
-```
-
-### Hover Effect
-
-**Location:** style.css lines 1611-1615
-
-```css
-.project-list-item:hover {
-  transform: translateY(-4px); /* Lift up */
-  box-shadow: 0 4px 16px var(--color-shadow);
-  border-color: var(--color-accent);
-}
-```
-
-### Year Badge
-
-**Location:** style.css lines 1657-1666
-
-```css
-.project-list-year {
-  display: inline-block;
-  background: var(--color-accent);
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  width: fit-content;
-}
-```
-
-### Responsive Design
-
-**Mobile (Default):**
-
-- Vertical layout (image on top, content below)
-
-**Tablet & Up (768px+):**
-
-```css
-@media (min-width: 768px) {
-  .project-list-item {
-    flex-direction: row; /* Side by side */
-  }
-  .project-list-image {
-    max-width: 250px;
-  }
-}
-```
-
-**Desktop (1024px+):**
-
-```css
-@media (min-width: 1024px) {
-  .project-list-item {
-    padding: 2rem;
-  }
-  .project-list-image {
-    max-width: 300px;
-  }
-  .project-list-title {
-    font-size: 1.75rem;
-  }
-}
-```
-
----
-
-# Logo Management
-
-## Current Logo
-
-Your website uses an **"LS" logo** representing your initials (Louis Schmalisch):
-
-- Green isometric blocks forming "L"
-- Purple isometric blocks forming "S"
-- All pages show the same consistent logo
-
----
-
-## How to Change the Logo
-
-### Method 1: Edit and Sync (Recommended)
-
-1. **Edit logo in index.html**
-
-   - Open index.html
-   - Find the logo SVG (lines 51-289)
-   - Make your changes
-
-2. **Run the sync script**
-
+1. **Clone the repository**
    ```bash
-   python -c "
-   import re
-
-   with open(r'c:\Users\louis\Documents\eP_self\index.html', 'r', encoding='utf-8') as f:
-       index_content = f.read()
-
-   logo_match = re.search(r'(<a href=\"index\.html\" class=\"group header-logo.*?</a>)', index_content, re.DOTALL)
-   if logo_match:
-       standard_logo = logo_match.group(1)
-
-       for page in ['about.html', 'projects.html', 'experience.html', 'cv.html']:
-           filepath = rf'c:\Users\louis\Documents\eP_self\{page}'
-           with open(filepath, 'r', encoding='utf-8') as f:
-               content = f.read()
-
-           new_content = re.sub(
-               r'<a href=\"index\.html\" class=\"group header-logo.*?</a>',
-               standard_logo,
-               content,
-               flags=re.DOTALL
-           )
-
-           with open(filepath, 'w', encoding='utf-8') as f:
-               f.write(new_content)
-
-           print(f'Updated {page}')
-   "
+   git clone https://github.com/schmlou/ePortfolio.git
+   cd ePortfolio
    ```
 
-### Method 2: Use Image Logo
+2. **Open in browser**
+   - Simply open `index.html` in your web browser
+   - Or use a local server (recommended):
+     ```bash
+     # Python 3
+     python -m http.server 8000
 
-Replace the inline SVG with an image:
+     # Python 2
+     python -m SimpleHTTPServer 8000
 
-1. Save your logo as `assets/logo.svg` or `assets/logo.png`
-2. Edit index.html:
-   ```html
-   <a href="index.html" class="group header-logo flex items-center">
-     <img src="assets/logo.svg" alt="Logo" class="h-10 w-6 sm:h-20 sm:w-12" />
-   </a>
-   ```
-3. Run the sync script to apply to all pages
+     # Node.js (http-server)
+     npx http-server
+     ```
+   - Then navigate to `http://localhost:8000`
 
-### Method 3: Change Colors
-
-Edit the SVG fill colors in index.html:
-
-**Current colors:**
-
-```html
-<!-- Green -->
-fill="#5ff26b"
-<!-- Light green -->
-fill="#98ff9c"
-<!-- Lighter green -->
-fill="#0cbe3b"
-<!-- Dark green -->
-
-<!-- Purple -->
-fill="#af67ff"
-<!-- Light purple -->
-fill="#e497ff"
-<!-- Lighter purple -->
-fill="#7b38cb"
-<!-- Dark purple -->
-```
-
-**Example: Blue and Orange**
-
-```html
-<!-- Blue -->
-fill="#5f9dff" fill="#98c8ff" fill="#0c5ebe"
-
-<!-- Orange -->
-fill="#ff8c67" fill="#ffc397" fill="#cb6938"
-```
+3. **Start editing**
+   - Edit markdown files in the `static/` folder
+   - Refresh browser to see changes
 
 ---
 
-# Quick Reference
+## Content Management
 
-## File Locations
+### Markdown Files
 
-### HTML Pages
+The website uses a dual-content system: **short** versions for the home page and **full** versions for detail pages.
 
-- `index.html` - Home page
-- `about.html` - About detail page
-- `projects.html` - Projects list page
-- `experience.html` - Experience detail page
-- `cv.html` - CV detail page
-
-### Content Files
-
-- `static/about.md` - Home page about (short)
-- `static/about-full.md` - About page (detailed)
-- `static/experience.md` - Home page experience (short)
-- `static/experience-full.md` - Experience page (detailed)
-- `static/cv.md` - Home page CV (short)
-- `static/cv-full.md` - CV page (detailed)
-- `static/projects.json` - Projects data
-
-### Code Files
-
-- `script.js` - JavaScript functionality
-- `style.css` - Styling
-
----
-
-## Common Tasks
-
-### Add New Project
-
-1. Open `static/projects.json`
-2. Add new project object:
-   ```json
-   {
-     "title": "New Project",
-     "year": 2024,
-     "venue": "Conference",
-     "authors": "Your Name",
-     "description": "Description...",
-     "tags": ["Tag1", "Tag2"],
-     "links": {
-       "paper": "https://...",
-       "code": "https://github.com/..."
-     }
-   }
-   ```
-3. Save file
-4. Refresh browser
-
-### Edit About Content
-
-**For home page:**
-
-1. Edit `static/about.md`
-2. Keep it brief (2-3 paragraphs)
-
-**For detail page:**
-
-1. Edit `static/about-full.md`
-2. Add full details
-
-### Change Logo
-
-1. Edit logo in `index.html` (lines 51-289)
-2. Run sync script (see Logo Management section)
-
----
-
-# Troubleshooting
-
-## Content Issues
-
-### Content Not Loading
-
-**Symptoms:** Section shows "Loading..." or error
-
-**Check:**
-
-1. File exists in `static/` folder
-2. Filename is correct (case-sensitive)
-3. Browser console (F12) for errors
-
-**Common errors:**
+#### Content Flow
 
 ```
-Error loading about content - all paths failed: HTTP 404
+Page Visited
+    ↓
+JavaScript detects page
+    ↓
+┌─────────────────────┐
+│ Is it index.html?   │
+└─────────────────────┘
+    ↓           ↓
+  YES          NO
+    ↓           ↓
+Load .md    Load -full.md
+(short)     (detailed)
 ```
 
-**Solution:** File missing or misnamed
-
-### Wrong Content Showing
-
-**Symptoms:** Detail page shows short content
-
-**Debug:**
-
-```javascript
-// Add to script.js temporarily
-console.log("Current page:", currentPage);
-console.log("Is detail page?", isDetailPage);
-console.log("Loading file:", fileName);
-```
-
-**Check:**
-
-1. Browser console shows which file is loading
-2. Verify correct file exists
-3. Hard refresh (Ctrl+F5)
-
-### Same Content Everywhere
-
-**Cause:** Both `.md` and `-full.md` files are identical
-
-**Solution:** Edit `-full.md` files to add more detail
-
----
-
-## Projects Issues
-
-### Projects Not Sorted
-
-**Check:**
-
-1. Each project has `year` field
-2. Year is a number: `2024` not `"2024"`
-3. No typos: `year` not `Year`
-
-**Debug:**
-
-```javascript
-console.log(
-  "Sorted:",
-  projects.map((p) => p.year)
-);
-```
-
-### List Not Showing
-
-**Symptoms:** Carousel shows on projects.html
-
-**Check:**
-
-1. Filename is exactly `projects.html`
-2. Hard refresh (Ctrl+F5)
-3. Check console for errors
-
----
-
-## Logo Issues
-
-### Logo Different on Pages
-
-**Cause:** Logos weren't synced
-
-**Solution:** Run the logo sync script (see Logo Management)
-
-### Logo Not Appearing
-
-**Check:**
-
-1. SVG code is complete
-2. No syntax errors in HTML
-3. Check browser console
-
----
-
-## General Issues
-
-### Changes Not Appearing
-
-**Try:**
-
-1. Hard refresh: Ctrl+F5 (Windows) or Cmd+Shift+R (Mac)
-2. Clear browser cache
-3. Check if you saved the file
-4. Verify you're editing the correct file
-
-### Browser Console Errors
-
-**How to check:**
-
-1. Press F12 (or right-click → Inspect)
-2. Click "Console" tab
-3. Look for red error messages
-4. Read the error and file location
-
----
-
-## Testing Checklist
-
-### After Editing Content
-
-- [ ] Open index.html - short versions show?
-- [ ] Open about.html - full about content?
-- [ ] Open experience.html - full experience?
-- [ ] Open cv.html - full CV?
-- [ ] Open projects.html - list view?
-- [ ] All pages - same logo?
-
-### After Adding Project
-
-- [ ] Project appears in carousel (index.html)
-- [ ] Project appears in list (projects.html)
-- [ ] Projects sorted by year (newest first)
-- [ ] All links work
-- [ ] Images load
-
-### After Changing Logo
-
-- [ ] Logo appears on all 5 pages
-- [ ] Logo looks consistent
-- [ ] Logo is correct size
-- [ ] Logo animation works (if applicable)
-
----
-
-## Key Concepts
-
-### Conditional Loading
-
-The system automatically chooses content based on the page:
-
-- **Home page** → short `.md` files
-- **Detail pages** → full `-full.md` files
-
-### Page Detection
-
-JavaScript checks the URL to determine which page:
-
-```javascript
-const currentPage = window.location.pathname.split("/").pop();
-```
-
-### Responsive Design
-
-Layouts adapt to screen size:
-
-- **Mobile:** Vertical stacking
-- **Tablet:** Side-by-side
-- **Desktop:** More spacing
-
-### Dynamic Content
-
-Content is loaded from files, not hardcoded:
-
-- Easy to update
-- No code changes needed
-- Just edit markdown/JSON
-
----
-
-## Best Practices
-
-### Content
-
-1. **Home page:** Brief, engaging summaries
-2. **Detail pages:** Comprehensive information
-3. **Consistency:** Same headings in both versions
-4. **Testing:** Always test after changes
-
-### Files
-
-1. **Naming:** Use exact names (case-sensitive)
-2. **Organization:** Keep files in `static/` folder
-3. **Backup:** Save copies before major changes
-
-### Code
-
-1. **Don't edit:** Unless you understand it
-2. **Test locally:** Before deploying
-3. **Browser console:** Check for errors
-4. **Version control:** Use git for tracking
-
----
-
-## Summary
-
-✅ **Content System:** Automatically loads short/full versions
-✅ **Projects:** Carousel on home, list on projects page
-✅ **Logo:** Consistent "LS" logo across all pages
-✅ **Responsive:** Works on mobile, tablet, desktop
-✅ **Easy Updates:** Edit markdown/JSON files
-
----
-
-**Questions?** Check browser console (F12) for errors, or review the specific sections above.
-
-**Last Updated:** 2025-11-28
-
----
-
-# Code Explanation
-
-## File Structure
-
-```
-eP_self/
-├── index.html          # Main landing page
-├── about.html          # About detail page
-├── projects.html       # Projects list page
-├── experience.html     # Experience detail page
-├── cv.html             # CV detail page
-├── style.css           # All visual styling
-├── script.js           # Dynamic functionality
-├── static/             # Content folder
-│   ├── about.md        # Short about content
-│   ├── about-full.md   # Full about content
-│   ├── experience.md   # Short experience
-│   ├── experience-full.md # Full experience
-│   ├── cv.md           # Short CV
-│   ├── cv-full.md      # Full CV
-│   └── projects.json   # Projects data
-└── assets/             # Images and downloads
-    ├── favicon.ico     # Browser tab icon
-    └── Louis_Schmalisch_CV.pdf  # CV download
-```
-
----
-
-## How Files Work Together
-
-### 1. HTML Files
-
-**Purpose:** Structure and layout
-
-**index.html (Landing Page):**
-
-- Shows all sections on one page
-- Loads short content (`.md` files)
-- Carousel view for projects
-
-**Detail Pages (about.html, etc.):**
-
-- Each shows one section
-- Loads full content (`-full.md` files)
-- List view for projects (projects.html)
-
-### 2. CSS (style.css)
-
-**Purpose:** Visual styling and theming
-
-**CSS Variables:**
-
-```css
-:root {
-  --color-global-bg: oklch(98.48% 0 0);
-  --color-accent: #af67ff;
-}
-```
-
-### 3. JavaScript (script.js)
-
-**Purpose:** Dynamic functionality and content loading
-
-**Main Classes:**
-
-- ThemeManager: Light/dark theme
-- MobileNavigation: Mobile menu
-- SmoothScroll: Smooth scrolling
-- MarkdownLoader: Content loading
-
----
-
-## Markdown Syntax Reference
+#### File Mapping
+
+| Page            | Section    | File Loaded        |
+|-----------------|------------|--------------------|
+| index.html      | About      | about.md           |
+| index.html      | Experience | experience.md      |
+| index.html      | CV         | cv.md              |
+| about.html      | About      | about-full.md      |
+| experience.html | Experience | experience-full.md |
+| cv.html         | CV         | cv-full.md         |
+
+#### Supported Markdown Syntax
 
 ```markdown
-## Heading 2 → <h2>Heading 2</h2>
+# Heading 1
+## Heading 2
+### Heading 3
 
-**bold text** → <strong>bold text</strong>
-[Link](https://...) → <a href="...">Link</a>
+**Bold text**
+*Italic text*
 
-- List item → <li>List item</li>
+[Link text](https://example.com)
+
+- List item 1
+- List item 2
+
+---  (horizontal rule)
 ```
 
----
+### Projects Data (JSON)
 
-## Projects JSON Format
+Edit `static/projects.json` to add/modify projects:
 
 ```json
 {
   "title": "Project Name",
+  "description": "Brief description of the project",
+  "image": "assets/project-image.jpg",
+  "venue": "University/Conference Name",
+  "authors": "Author Names",
   "year": 2024,
-  "description": "What it does...",
-  "tags": ["tag1", "tag2"],
+  "tags": ["tag1", "tag2", "tag3"],
   "links": {
-    "paper": "https://...",
-    "code": "https://github.com/...",
-    "demo": "https://...",
-    "pdf": "assets/projects/project-paper.pdf"
+    "paper": "https://link-to-paper.com",
+    "code": "https://github.com/username/repo",
+    "demo": "https://demo-url.com",
+    "pdf": "assets/projects/paper.pdf"
   }
 }
 ```
 
 **Link Types:**
-
-- `paper` - External link to published paper
-- `code` - GitHub repository or code link
-- `demo` - Live demo or website link
-- `pdf` - Local PDF file for download (shows as "📄 Download PDF" button)
-
-**Common Tags:** `"python"`, `"gis"`, `"machine-learning"`, `"remote-sensing"`
-
-**PDF Downloads:**
-To add a downloadable PDF to a project:
-
-1. Place PDF in `assets/projects/` folder (e.g., `assets/projects/wildfire-paper.pdf`)
-2. Add `"pdf": "assets/projects/wildfire-paper.pdf"` to the project's links
-3. The button will automatically appear with special styling
+- `paper`: External link to published paper
+- `code`: GitHub repository or source code link
+- `demo`: Live demo or interactive visualization
+- `pdf`: Local PDF file (shows "📄 Download PDF" button)
 
 ---
 
-# Assets Needed
+## Features
 
-## Required Files
+### 1. Theme System
 
-### 1. Favicon
+**Location:** [script.js](script.js) (ThemeManager class, lines 2-49)
 
-- **File:** `assets/favicon.ico`
-- **Size:** 16x16 or 32x32 pixels
-- **Create at:** https://favicon.io/favicon-generator/
+The website supports light and dark themes with:
+- Toggle button in header
+- localStorage persistence
+- No flash on page load (inline script in HTML)
+- Keyboard shortcut: `Ctrl/Cmd + T`
 
-### 2. CV PDF
+**Theme Colors** are defined in [style.css](style.css) using CSS custom properties:
 
-- **File:** `assets/Louis_Schmalisch_CV.pdf`
-- **Format:** PDF
-- **Purpose:** Downloadable from CV section
+```css
+[data-theme="dark"] {
+  --color-global-bg: #1a1a1a;
+  --color-global-text: #e0e0e0;
+  --color-accent: #af67ff;
+}
+
+[data-theme="light"] {
+  --color-global-bg: #ffffff;
+  --color-global-text: #1a1a1a;
+  --color-accent: #7b38cb;
+}
+```
+
+### 2. Profile Photo Header
+
+**Location:** [index.html](index.html) (line 51-52)
+
+The header displays a circular profile photo with proper sizing:
+- File: `assets/profile-photo.jpg`
+- Dimensions: 40x40px (mobile) to 48x48px (desktop)
+- Circular crop with `border-radius: 50%`
+- Centered top crop for optimal framing
+
+### 3. Dynamic Content Loading
+
+**Location:** [script.js](script.js) (MarkdownLoader class, lines 318-781)
+
+Features:
+- Automatic detection of current page
+- Conditional loading of short vs. full content
+- Multiple path fallbacks for compatibility
+- Client-side Markdown parsing
+- Error handling with user feedback
+
+### 4. Projects System
+
+#### Carousel View (Home Page)
+
+**Location:** [script.js](script.js) (renderProjects method, lines 505-588)
+
+Features:
+- Swipeable cards on mobile
+- Arrow navigation
+- Dot indicators
+- Keyboard navigation (left/right arrows)
+- Click on card edges to navigate
+
+#### List View (Projects Page)
+
+**Location:** [script.js](script.js) (renderProjectsList method, lines 725-780)
+
+Features:
+- Sorted by year (newest first)
+- Full project details visible
+- Hover effects
+- Responsive layout
+
+### 5. Navigation System
+
+**Location:** [script.js](script.js) (NavigationHighlight class, lines 168-290)
+
+Features:
+- Active section highlighting while scrolling
+- Smooth scrolling to sections
+- Mobile menu with hamburger icon
+- Close on outside click/escape key
+- URL hash support
+
+### 6. Social Media Icons
+
+**Location:** [static/about.md](static/about.md) (lines 3-21)
+
+Includes inline SVG icons for:
+- GitHub
+- LinkedIn
+- Email
+
+### 7. Party Hat Explosion
+
+**Location:** [script.js](script.js) (PartyHatExplosion class, lines 942-1124)
+
+Easter egg feature:
+- Click the logo for a party animation
+- Respects `prefers-reduced-motion`
+- Creates colorful party hats and sparkles
+- Auto-cleanup after animation
 
 ---
 
-## Optional Files
+## Customization Guide
 
-### 3. Profile Photo
+### Update Personal Information
 
-- **File:** `assets/profile-photo.jpg`
-- **Size:** 400x400 pixels (square)
-- **How to add:**
-  ```markdown
-  <img src="assets/profile-photo.jpg" alt="Your Name"
-       style="float: right; max-width: 200px; border-radius: 10px;">
-  ```
+#### 1. Change Name and Title
 
-### 4. Project Screenshots
+Edit [index.html](index.html):
+```html
+<title>Your Name - Portfolio</title>
+<meta name="description" content="Your title/description">
+<span class="text-xl font-bold sm:text-2xl">Your Name</span>
+```
 
-- **Size:** 800x600 pixels or 16:9 ratio
-- **Format:** JPG or PNG
-- **Optimize:** Use https://tinypng.com/
+Repeat for other HTML files ([about.html](about.html), [projects.html](projects.html), [experience.html](experience.html), [cv.html](cv.html)).
+
+#### 2. Update Social Links
+
+Edit [static/about.md](static/about.md) (lines 4-20):
+```html
+<a href="https://github.com/yourusername" target="_blank">
+<a href="https://www.linkedin.com/in/yourusername/" target="_blank">
+<a href="mailto:your.email@example.com">
+```
+
+#### 3. Add/Replace Profile Photo
+
+1. Export your photo as JPG (square, at least 200x200px)
+2. Save as `assets/profile-photo.jpg`
+3. Photo automatically displays in header
+
+#### 4. Update CV PDF
+
+1. Export your CV as PDF
+2. Name it `Louis_Schmalisch_CV.pdf` (or update filename in cv.md)
+3. Place in `assets/` folder
+
+### Customize Colors
+
+Edit [style.css](style.css) CSS custom properties:
+
+```css
+[data-theme="dark"] {
+  --color-accent: #af67ff;     /* Purple accent */
+  --color-global-bg: #1a1a1a;  /* Background */
+  --color-global-text: #e0e0e0; /* Text color */
+}
+```
+
+### Add New Projects
+
+Edit [static/projects.json](static/projects.json):
+
+1. Add new project object to array
+2. Include year as number (for sorting)
+3. Add project image to `assets/` folder
+4. Use tags for categorization
+5. Add relevant links (paper, code, demo, pdf)
+
+Example:
+```json
+{
+  "title": "New Project",
+  "description": "Description of what this project does...",
+  "image": "assets/new-project.jpg",
+  "venue": "University Name",
+  "authors": "Your Name",
+  "year": 2024,
+  "tags": ["python", "gis", "machine-learning"],
+  "links": {
+    "code": "https://github.com/username/project",
+    "pdf": "assets/projects/project-paper.pdf"
+  }
+}
+```
+
+### Modify Content
+
+#### Home Page (Short Versions)
+- Edit `static/about.md` (2-3 paragraphs)
+- Edit `static/experience.md` (key highlights)
+- Edit `static/cv.md` (brief overview)
+
+#### Detail Pages (Full Versions)
+- Edit `static/about-full.md` (complete background)
+- Edit `static/experience-full.md` (full job details)
+- Edit `static/cv-full.md` (complete CV)
 
 ---
 
-## Image Optimization Tips
+## Deployment
 
-1. **Resize:** Keep under 800px wide
-2. **Compress:** Use https://tinypng.com/
-3. **Target:** Under 500KB each
+### GitHub Pages
+
+1. **Push to GitHub**
+   ```bash
+   git add .
+   git commit -m "Update portfolio"
+   git push origin main
+   ```
+
+2. **Enable GitHub Pages**
+   - Go to repository Settings
+   - Navigate to Pages section
+   - Source: Deploy from branch `main`
+   - Folder: `/ (root)`
+   - Save
+
+3. **Custom Domain (Optional)**
+   - Add domain to CNAME file
+   - Configure DNS settings with your provider
+   - Enable HTTPS in GitHub Pages settings
+
+### Other Hosting Options
+
+The site is static HTML/CSS/JS and can be hosted on:
+- Netlify
+- Vercel
+- Cloudflare Pages
+- AWS S3 + CloudFront
+- Any web hosting service
 
 ---
+
+## Troubleshooting
+
+### Content Not Loading
+
+**Symptoms:** Section shows "Loading..." or error message
+
+**Solutions:**
+1. Check browser console (F12) for errors
+2. Verify file exists in `static/` folder
+3. Check filename spelling (case-sensitive)
+4. Try hard refresh (Ctrl+F5 / Cmd+Shift+R)
+5. Ensure you're running from a server (not file://)
+
+### Wrong Content Displayed
+
+**Symptoms:** Detail page shows short content
+
+**Debug:**
+Add to [script.js](script.js) temporarily:
+```javascript
+console.log("Current page:", currentPage);
+console.log("Is detail page?", isDetailPage);
+console.log("Loading file:", fileName);
+```
+
+### Projects Not Sorted
+
+**Check:**
+1. Year is a number: `2024` not `"2024"`
+2. All projects have year field
+3. No typos in JSON structure
+
+### Theme Not Persisting
+
+**Solutions:**
+1. Check localStorage is enabled
+2. Clear browser cache
+3. Check for JavaScript errors in console
+
+### Images Not Loading
+
+**Check:**
+1. File paths are relative from root
+2. Filenames match exactly (case-sensitive)
+3. Images exist in `assets/` folder
+4. File extensions are correct (.jpg, .png, etc.)
+
+---
+
+## Development Notes
+
+### Code Architecture
+
+The JavaScript is organized into classes:
+- `ThemeManager`: Handles dark/light theme switching
+- `MobileNavigation`: Mobile menu functionality
+- `SmoothScroll`: Smooth scrolling behavior
+- `NavigationHighlight`: Active nav link highlighting
+- `LazyImageLoader`: Lazy loading for images
+- `MarkdownLoader`: Content loading and parsing
+- `PartyHatExplosion`: Easter egg animation
+
+### Performance Optimizations
+
+1. **Lazy Loading**: Images load as they enter viewport
+2. **Content Caching**: Browser caches static files
+3. **Minimal Dependencies**: No frameworks, small bundle size
+4. **Throttled Scroll**: Scroll events throttled to 100ms
+5. **Passive Event Listeners**: Touch events marked passive
+
+### Browser Support
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+Features gracefully degrade in older browsers.
+
+### Accessibility
+
+- Semantic HTML5 elements
+- ARIA labels for interactive elements
+- Keyboard navigation support
+- `prefers-reduced-motion` support
+- Sufficient color contrast ratios
+
+### File Size
+
+- **index.html**: ~15 KB
+- **style.css**: ~50 KB
+- **script.js**: ~35 KB
+- **Total**: ~100 KB (before assets)
+
+Fast loading on all connections.
+
+---
+
+## Quick Reference Commands
+
+### Adding Content
+```bash
+# Edit about content (short)
+edit static/about.md
+
+# Edit about content (full)
+edit static/about-full.md
+
+# Add new project
+edit static/projects.json
+```
+
+### Git Workflow
+```bash
+# Check status
+git status
+
+# Add changes
+git add .
+
+# Commit changes
+git commit -m "Update content"
+
+# Push to GitHub
+git push origin main
+```
+
+### Testing Locally
+```bash
+# Python 3
+python -m http.server 8000
+
+# Then open:
+# http://localhost:8000
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) file for details.
+
+---
+
+## Credits
+
+- **Design Inspiration**: [Astro Cactus Theme](https://github.com/chrismwilliams/astro-theme-cactus)
+- **Font**: [JetBrains Mono](https://www.jetbrains.com/lp/mono/) by JetBrains
+- **Icons**: Inline SVG social media icons
+
+---
+
+## Contact
+
+**Louis Schmalisch**
+- Email: louisschmalisch@gmail.com
+- GitHub: [@schmlou](https://github.com/schmlou)
+- LinkedIn: [louisschmalisch](https://www.linkedin.com/in/louisschmalisch/)
+
+---
+
+**Last Updated:** 2025-12-15
