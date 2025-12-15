@@ -6,12 +6,12 @@
     "venue": "University of Bayreuth",
     "authors": "Jela Düsselmann, Sina Lindner, Tim Neynaber, Louis Schmalisch",
     "year": 2024,
-    "tags": ["climate-resilience", "remote-sensing", "urban planning"],
+    "tags": ["climate-resilience","urban planning", "remote-sensing" ],
     "links": {
-      //"paper": "https://example.com/wildfire-paper.pdf",
-      //"code": "https://github.com/schmlou/wildfire-risk",
-      "pdf": "assets/projects/Studienprojekt_St.Georgen_Lindner_Neynaber_Schmalisch_Duesselmann.pdf"
-      //"demo": "https://example.com/heat-map-viewer"
+      "paper": "",
+      "code": "",
+      "pdf": "assets/projects/Studienprojekt_St.Georgen_Lindner_Neynaber_Schmalisch_Duesselmann.pdf",
+      "demo": ""
     }
   }
 ]
