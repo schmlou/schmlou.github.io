@@ -18,11 +18,19 @@ Location: Salzburg, Austria<br>
     <div class="timeline-header">
       <span class="timeline-org">Paris Lodron University Salzburg</span>
       <span class="timeline-role">• Master's in Applied Geoinformatics</span>
-      <span class="timeline-dates">Oct. 2025 – ongoing</span>
+      <span class="timeline-dates">Oct. 2025 – Ongoing</span>
     </div>
     <div class="timeline-meta">Z_GIS, Salzburg, Austria</div>
     <div class="timeline-desc">
-      <p><strong>Relevant Coursework:</strong> Advanced Remote Sensing, Spatial Data Science, Machine Learning for Geospatial Analysis, Web Mapping Technologies, Environmental Monitoring</p>
+      <p><strong>Relevant Coursework:</strong> 
+      - Orientation, Career Development & ePortfolio
+- Scientific Methods and Writing
+- Geographic Information Science and Technology
+- Cartographic Design & Geomedia
+- Methods in Spatial Analysis
+- Software Development
+- Design of Geospatial Data Models and Services
+- OpenGIS: Standards, Architectures & Services</p>
     </div>
   </div>
 
@@ -37,6 +45,12 @@ Location: Salzburg, Austria<br>
     <div class="timeline-desc">
       <p><strong>Specialization:</strong> Human Geography</p>
       <p><strong>Bachelor Thesis:</strong> [Geopolitics of global Infrastructure]</p>
+      <p><strong>Relevant Coursework:</strong>
+      - Introduction to GIS and Cartography
+- Physical Geography and Environmental Systems
+- Human Geography and Spatial Planning
+- Quantitative Methods in Geography
+- Field Methods in Geography</p>
     </div>
   </div>
 </div>

@@ -14,40 +14,48 @@ Since January 2022, I have been working at Asseco BERIT GmbH, located in Mannhei
 
 ## Education
 
-### Master of Science in Applied Geoinformatics
-
-**University of Salzburg, Z_GIS** • Oct. 2025 - Ongoing
-
-Specialized graduate program focusing on advanced geospatial technologies and their application.
-
-**Relevant Coursework:**
-
-- Orientation, Career Development & ePortfolio
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-header">
+      <span class="timeline-org">Paris Lodron University Salzburg</span>
+      <span class="timeline-role">• Master's in Applied Geoinformatics</span>
+      <span class="timeline-dates">Oct. 2025 – Ongoing</span>
+    </div>
+    <div class="timeline-meta">Z_GIS, Salzburg, Austria</div>
+    <div class="timeline-desc">
+      <p><strong>Relevant Coursework:</strong> 
+      - Orientation, Career Development & ePortfolio
 - Scientific Methods and Writing
 - Geographic Information Science and Technology
 - Cartographic Design & Geomedia
 - Methods in Spatial Analysis
 - Software Development
 - Design of Geospatial Data Models and Services
-- OpenGIS: Standards, Architectures & Services
+- OpenGIS: Standards, Architectures & Services</p>
+    </div>
+  </div>
 
-### Bachelor of Science in Geography: Society and Enviroment
-
-**University of Bayreuth** • Jan. 2021 - Sept. 2025
-
-Foundation in geographic concepts, spatial thinking, and introduction to geospatial technologies.
-
-**Specialization:** Human Geography
-
-**Bachelor Thesis:** Geopolitics of global Infrastructure
-
-**Key Courses:**
-
-- Introduction to GIS and Cartography
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-header">
+      <span class="timeline-org">University of Bayreuth</span>
+      <span class="timeline-role">• B.Sc. Geography: Society and Enviroment</span>
+      <span class="timeline-dates">Oct. 2021 – Sept. 2025</span>
+    </div>
+    <div class="timeline-meta">[Bayreuth, Germany]</div>
+    <div class="timeline-desc">
+      <p><strong>Specialization:</strong> Human Geography</p>
+      <p><strong>Bachelor Thesis:</strong> [Geopolitics of global Infrastructure]</p>
+      <p><strong>Relevant Coursework:</strong>
+      - Introduction to GIS and Cartography
 - Physical Geography and Environmental Systems
 - Human Geography and Spatial Planning
 - Quantitative Methods in Geography
-- Field Methods in Geography
+- Field Methods in Geography</p>
+    </div>
+  </div>
+</div>
 
 ---
 
@@ -61,4 +69,4 @@ Foundation in geographic concepts, spatial thinking, and introduction to geospat
 
 **Youth Football Coach** • 2016 - 2020
 
-I've coached one of the youth football Team of my then local sports club.
+I've coached one of the youth football Teams of my then local sports club.
