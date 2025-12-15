@@ -24,6 +24,7 @@
     <div class="timeline-meta">Geography Department, Bayreuth, Germany</div>
     <div class="timeline-desc">
       <p>Thesis: Geopolitics of global Infrastructure</p>
+      <p>Focus: Human Geography</p>
       <p>The bachelor's programme "Geography" comprises both the scientific methods of geography and specialist knowledge in a large number of geographical sub-disciplines. The broad curriculum enables students to solve spatial problems independently, and to adapt to the changing requirements of their future occupational fields.</p>
     </div>
   </div>
