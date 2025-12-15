@@ -42,18 +42,22 @@ This is a modern, responsive portfolio website built with vanilla HTML, CSS, and
 ## Technology Stack
 
 ### Frontend
+
 - **HTML5**: Semantic markup for content structure
 - **CSS3**: Modern styling with CSS custom properties (variables) for theming
 - **JavaScript (ES6+)**: Vanilla JS with classes for functionality
 
 ### Content Format
+
 - **Markdown**: `.md` files for text content (parsed client-side)
 - **JSON**: `projects.json` for project data
 
 ### Fonts
+
 - **JetBrains Mono**: Google Font for consistent typography
 
 ### Version Control
+
 - **Git**: Version control system
 - **GitHub**: Repository hosting and GitHub Pages deployment
 
@@ -97,6 +101,7 @@ ePortfolio/
 ## Setup and Installation
 
 ### Prerequisites
+
 - A modern web browser (Chrome, Firefox, Safari, Edge)
 - A text editor (VS Code, Sublime Text, etc.)
 - Git (for version control)
@@ -104,14 +109,17 @@ ePortfolio/
 ### Local Development
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/schmlou/ePortfolio.git
    cd ePortfolio
    ```
 
 2. **Open in browser**
+
    - Simply open `index.html` in your web browser
    - Or use a local server (recommended):
+
      ```bash
      # Python 3
      python -m http.server 8000
@@ -122,6 +130,7 @@ ePortfolio/
      # Node.js (http-server)
      npx http-server
      ```
+
    - Then navigate to `http://localhost:8000`
 
 3. **Start editing**
@@ -156,7 +165,7 @@ Load .md    Load -full.md
 #### File Mapping
 
 | Page            | Section    | File Loaded        |
-|-----------------|------------|--------------------|
+| --------------- | ---------- | ------------------ |
 | index.html      | About      | about.md           |
 | index.html      | Experience | experience.md      |
 | index.html      | CV         | cv.md              |
@@ -168,18 +177,20 @@ Load .md    Load -full.md
 
 ```markdown
 # Heading 1
+
 ## Heading 2
+
 ### Heading 3
 
 **Bold text**
-*Italic text*
+_Italic text_
 
 [Link text](https://example.com)
 
 - List item 1
 - List item 2
 
----  (horizontal rule)
+--- (horizontal rule)
 ```
 
 ### Projects Data (JSON)
@@ -192,9 +203,9 @@ Edit `static/projects.json` to add/modify projects:
   "description": "Brief description of the project",
   "image": "assets/project-image.jpg",
   "venue": "University/Conference Name",
-  "authors": "Author Names",
+  "authors": " <a href='https://www.linkedin.com/in/authorName/' target='_blank' rel='noopener noreferrer'>Author Names</a>",
   "year": 2024,
-  "tags": ["tag1", "tag2", "tag3"],
+  "tags": ["tag1", "tag2", "tag3", "language"],
   "links": {
     "paper": "https://link-to-paper.com",
     "code": "https://github.com/username/repo",
@@ -205,6 +216,7 @@ Edit `static/projects.json` to add/modify projects:
 ```
 
 **Link Types:**
+
 - `paper`: External link to published paper
 - `code`: GitHub repository or source code link
 - `demo`: Live demo or interactive visualization
@@ -219,6 +231,7 @@ Edit `static/projects.json` to add/modify projects:
 **Location:** [script.js](script.js) (ThemeManager class, lines 2-49)
 
 The website supports light and dark themes with:
+
 - Toggle button in header
 - localStorage persistence
 - No flash on page load (inline script in HTML)
@@ -245,6 +258,7 @@ The website supports light and dark themes with:
 **Location:** [index.html](index.html) (line 51-52)
 
 The header displays a circular profile photo with proper sizing:
+
 - File: `assets/profile-photo.jpg`
 - Dimensions: 40x40px (mobile) to 48x48px (desktop)
 - Circular crop with `border-radius: 50%`
@@ -255,6 +269,7 @@ The header displays a circular profile photo with proper sizing:
 **Location:** [script.js](script.js) (MarkdownLoader class, lines 318-781)
 
 Features:
+
 - Automatic detection of current page
 - Conditional loading of short vs. full content
 - Multiple path fallbacks for compatibility
@@ -268,6 +283,7 @@ Features:
 **Location:** [script.js](script.js) (renderProjects method, lines 505-588)
 
 Features:
+
 - Swipeable cards on mobile
 - Arrow navigation
 - Dot indicators
@@ -279,6 +295,7 @@ Features:
 **Location:** [script.js](script.js) (renderProjectsList method, lines 725-780)
 
 Features:
+
 - Sorted by year (newest first)
 - Full project details visible
 - Hover effects
@@ -289,6 +306,7 @@ Features:
 **Location:** [script.js](script.js) (NavigationHighlight class, lines 168-290)
 
 Features:
+
 - Active section highlighting while scrolling
 - Smooth scrolling to sections
 - Mobile menu with hamburger icon
@@ -300,6 +318,7 @@ Features:
 **Location:** [static/about.md](static/about.md) (lines 3-21)
 
 Includes inline SVG icons for:
+
 - GitHub
 - LinkedIn
 - Email
@@ -309,6 +328,7 @@ Includes inline SVG icons for:
 **Location:** [script.js](script.js) (PartyHatExplosion class, lines 942-1124)
 
 Easter egg feature:
+
 - Click the logo for a party animation
 - Respects `prefers-reduced-motion`
 - Creates colorful party hats and sparkles
@@ -323,9 +343,10 @@ Easter egg feature:
 #### 1. Change Name and Title
 
 Edit [index.html](index.html):
+
 ```html
 <title>Your Name - Portfolio</title>
-<meta name="description" content="Your title/description">
+<meta name="description" content="Your title/description" />
 <span class="text-xl font-bold sm:text-2xl">Your Name</span>
 ```
 
@@ -334,10 +355,12 @@ Repeat for other HTML files ([about.html](about.html), [projects.html](projects.
 #### 2. Update Social Links
 
 Edit [static/about.md](static/about.md) (lines 4-20):
+
 ```html
 <a href="https://github.com/yourusername" target="_blank">
-<a href="https://www.linkedin.com/in/yourusername/" target="_blank">
-<a href="mailto:your.email@example.com">
+  <a href="https://www.linkedin.com/in/yourusername/" target="_blank">
+    <a href="mailto:your.email@example.com"></a></a
+></a>
 ```
 
 #### 3. Add/Replace Profile Photo
@@ -358,8 +381,8 @@ Edit [style.css](style.css) CSS custom properties:
 
 ```css
 [data-theme="dark"] {
-  --color-accent: #af67ff;     /* Purple accent */
-  --color-global-bg: #1a1a1a;  /* Background */
+  --color-accent: #af67ff; /* Purple accent */
+  --color-global-bg: #1a1a1a; /* Background */
   --color-global-text: #e0e0e0; /* Text color */
 }
 ```
@@ -375,6 +398,7 @@ Edit [static/projects.json](static/projects.json):
 5. Add relevant links (paper, code, demo, pdf)
 
 Example:
+
 ```json
 {
   "title": "New Project",
@@ -394,11 +418,13 @@ Example:
 ### Modify Content
 
 #### Home Page (Short Versions)
+
 - Edit `static/about.md` (2-3 paragraphs)
 - Edit `static/experience.md` (key highlights)
 - Edit `static/cv.md` (brief overview)
 
 #### Detail Pages (Full Versions)
+
 - Edit `static/about-full.md` (complete background)
 - Edit `static/experience-full.md` (full job details)
 - Edit `static/cv-full.md` (complete CV)
@@ -410,6 +436,7 @@ Example:
 ### GitHub Pages
 
 1. **Push to GitHub**
+
    ```bash
    git add .
    git commit -m "Update portfolio"
@@ -417,6 +444,7 @@ Example:
    ```
 
 2. **Enable GitHub Pages**
+
    - Go to repository Settings
    - Navigate to Pages section
    - Source: Deploy from branch `main`
@@ -431,6 +459,7 @@ Example:
 ### Other Hosting Options
 
 The site is static HTML/CSS/JS and can be hosted on:
+
 - Netlify
 - Vercel
 - Cloudflare Pages
@@ -446,6 +475,7 @@ The site is static HTML/CSS/JS and can be hosted on:
 **Symptoms:** Section shows "Loading..." or error message
 
 **Solutions:**
+
 1. Check browser console (F12) for errors
 2. Verify file exists in `static/` folder
 3. Check filename spelling (case-sensitive)
@@ -458,6 +488,7 @@ The site is static HTML/CSS/JS and can be hosted on:
 
 **Debug:**
 Add to [script.js](script.js) temporarily:
+
 ```javascript
 console.log("Current page:", currentPage);
 console.log("Is detail page?", isDetailPage);
@@ -467,6 +498,7 @@ console.log("Loading file:", fileName);
 ### Projects Not Sorted
 
 **Check:**
+
 1. Year is a number: `2024` not `"2024"`
 2. All projects have year field
 3. No typos in JSON structure
@@ -474,6 +506,7 @@ console.log("Loading file:", fileName);
 ### Theme Not Persisting
 
 **Solutions:**
+
 1. Check localStorage is enabled
 2. Clear browser cache
 3. Check for JavaScript errors in console
@@ -481,6 +514,7 @@ console.log("Loading file:", fileName);
 ### Images Not Loading
 
 **Check:**
+
 1. File paths are relative from root
 2. Filenames match exactly (case-sensitive)
 3. Images exist in `assets/` folder
@@ -493,6 +527,7 @@ console.log("Loading file:", fileName);
 ### Code Architecture
 
 The JavaScript is organized into classes:
+
 - `ThemeManager`: Handles dark/light theme switching
 - `MobileNavigation`: Mobile menu functionality
 - `SmoothScroll`: Smooth scrolling behavior
@@ -540,6 +575,7 @@ Fast loading on all connections.
 ## Quick Reference Commands
 
 ### Adding Content
+
 ```bash
 # Edit about content (short)
 edit static/about.md
@@ -552,6 +588,7 @@ edit static/projects.json
 ```
 
 ### Git Workflow
+
 ```bash
 # Check status
 git status
@@ -567,6 +604,7 @@ git push origin main
 ```
 
 ### Testing Locally
+
 ```bash
 # Python 3
 python -m http.server 8000
@@ -594,6 +632,7 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) file for 
 ## Contact
 
 **Louis Schmalisch**
+
 - Email: louisschmalisch@gmail.com
 - GitHub: [@schmlou](https://github.com/schmlou)
 - LinkedIn: [louisschmalisch](https://www.linkedin.com/in/louisschmalisch/)
