@@ -21,6 +21,6 @@
 </div>
 
 Hi!<br>
-I'm Louis, a Master's student at Z_GIS, University of Salzburg, studying [Applied Geoinformatics](https://www.plus.ac.at/geoinformatik/education/agi/?lang=en).
+I'm Louis Schmalisch, a Master's student in [Applied Geoinformatics](https://www.plus.ac.at/geoinformatik/education/agi/?lang=en) at the Paris Lodron University Salzburg.
 
-I'm originally from Mannheim, Germany and studied Geography as my Bachelors in Bayreuth, Baveria. Due to my interest in the Geospatial Domain,and also my love for the mountains, I Decided to study Applied Geoinformatic in Salzburg, Austria;)
+I did my bachelor's in Geography, with a focus on human geography at the University of Bayreuth, where I discovered my interest in the geospatial domain.
