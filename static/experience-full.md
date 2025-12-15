@@ -43,16 +43,16 @@ Since January 2022, I have been working at Asseco BERIT GmbH, located in Mannhei
       <span class="timeline-role">• B.Sc. Geography: Society and Enviroment</span>
       <span class="timeline-dates">Oct. 2021 – Sept. 2025</span>
     </div>
-    <div class="timeline-meta">[Bayreuth, Germany]</div>
+    <div class="timeline-meta">Bayreuth, Germany</div>
     <div class="timeline-desc">
       <p><strong>Specialization:</strong> Human Geography</p>
       <p><strong>Bachelor Thesis:</strong> [Geopolitics of global Infrastructure]</p>
       <p><strong>Relevant Coursework:</strong>
-      - Introduction to GIS and Cartography
-- Physical Geography and Environmental Systems
-- Human Geography and Spatial Planning
-- Quantitative Methods in Geography
-- Field Methods in Geography</p>
+          - Introduction to GIS and Cartography
+          - Physical Geography and Environmental Systems
+          - Human Geography and Spatial Planning
+          - Quantitative Methods in Geography
+          - Field Methods in Geography</p>
     </div>
   </div>
 </div>
@@ -61,7 +61,7 @@ Since January 2022, I have been working at Asseco BERIT GmbH, located in Mannhei
 
 ## Certifications & Training
 
-- **Bauleitplanung 1** - University of Bayreuth, 2023
+**Bauleitplanung 1** - University of Bayreuth, 2023
 
 ## Volunteer Experience
 
