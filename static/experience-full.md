@@ -49,13 +49,9 @@ Foundation in geographic concepts, spatial thinking, and introduction to geospat
 - Quantitative Methods in Geography
 - Field Methods in Geography
 
----
-
 ## Certifications & Training
 
 - **Bauleitplanung 1** - University of Bayreuth, 2023
-
----
 
 ## Volunteer Experience
 
@@ -63,4 +59,4 @@ Foundation in geographic concepts, spatial thinking, and introduction to geospat
 
 **Youth Football Coach** • 2016 - 2020
 
-I've coached one of the youth football Team of my then local sports club.
+I've coached one of the youth football Teams of my then local sports club.

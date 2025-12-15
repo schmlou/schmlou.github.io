@@ -16,14 +16,12 @@ Location: Salzburg, Austria<br>
   <div class="timeline-item">
     <div class="timeline-dot"></div>
     <div class="timeline-header">
-      <span class="timeline-org">University of Salzburg</span>
+      <span class="timeline-org">Paris Lodron University Salzburg</span>
       <span class="timeline-role">• Master's in Applied Geoinformatics</span>
-      <span class="timeline-dates">2023–2025</span>
+      <span class="timeline-dates">Oct. 2025 – ongoing</span>
     </div>
     <div class="timeline-meta">Z_GIS, Salzburg, Austria</div>
     <div class="timeline-desc">
-      <p><strong>Thesis:</strong> [Your thesis topic]</p>
-      <p><strong>GPA:</strong> [X.XX] / 4.0</p>
       <p><strong>Relevant Coursework:</strong> Advanced Remote Sensing, Spatial Data Science, Machine Learning for Geospatial Analysis, Web Mapping Technologies, Environmental Monitoring</p>
     </div>
   </div>
@@ -31,7 +29,7 @@ Location: Salzburg, Austria<br>
   <div class="timeline-item">
     <div class="timeline-dot"></div>
     <div class="timeline-header">
-      <span class="timeline-org">[Previous University]</span>
+      <span class="timeline-org">University of Bayreuth</span>
       <span class="timeline-role">• B.Sc. Geography: Society and Enviroment</span>
       <span class="timeline-dates">Oct. 2021 – Sept. 2025</span>
     </div>
