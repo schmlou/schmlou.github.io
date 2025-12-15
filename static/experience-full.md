@@ -24,15 +24,15 @@ Since January 2022, I have been working at Asseco BERIT GmbH, located in Mannhei
     </div>
     <div class="timeline-meta">Z_GIS, Salzburg, Austria</div>
     <div class="timeline-desc">
-      <p><strong>Relevant Coursework:</strong> 
-      - Orientation, Career Development & ePortfolio
-- Scientific Methods and Writing
-- Geographic Information Science and Technology
-- Cartographic Design & Geomedia
-- Methods in Spatial Analysis
-- Software Development
-- Design of Geospatial Data Models and Services
-- OpenGIS: Standards, Architectures & Services</p>
+      <p><strong>Relevant Coursework:</strong>
+          - Orientation, Career Development & ePortfolio
+          - Scientific Methods and Writing
+          - Geographic Information Science and Technology
+          - Cartographic Design & Geomedia
+          - Methods in Spatial Analysis
+          - Software Development
+          - Design of Geospatial Data Models and Services
+          - OpenGIS: Standards, Architectures & Services</p>
     </div>
   </div>
 
@@ -46,7 +46,7 @@ Since January 2022, I have been working at Asseco BERIT GmbH, located in Mannhei
     <div class="timeline-meta">Bayreuth, Germany</div>
     <div class="timeline-desc">
       <p><strong>Specialization:</strong> Human Geography</p>
-      <p><strong>Bachelor Thesis:</strong> [Geopolitics of global Infrastructure]</p>
+      <p><strong>Bachelor Thesis:</strong> Geopolitics of global Infrastructure</p>
       <p><strong>Relevant Coursework:</strong>
           - Introduction to GIS and Cartography
           - Physical Geography and Environmental Systems
