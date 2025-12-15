@@ -4,26 +4,27 @@
   <div class="timeline-item">
     <div class="timeline-dot"></div>
     <div class="timeline-header">
-      <span class="timeline-org">University of Salzburg</span>
-      <span class="timeline-role">• Master's in Applied Geoinformatics</span>
-      <span class="timeline-dates">2023–2025</span>
+      <span class="timeline-org">Paris-Lodron University Salzburg</span>
+      <span class="timeline-role">• M.Sc. Applied Geoinformatics</span>
+      <span class="timeline-dates">Oct. 2025 – ongoing</span>
     </div>
     <div class="timeline-meta">Z_GIS, Salzburg, Austria</div>
     <div class="timeline-desc">
-      <p>Thesis: [Your thesis topic]</p>
-      <p>Coursework: Advanced GIS, Remote Sensing, Spatial Analysis</p>
+      <p>Coursework: Spatial Analysis, Software Development, Cartography & Geomedia, Geospatial Datamodels</p>
     </div>
   </div>
   
   <div class="timeline-item">
     <div class="timeline-dot"></div>
     <div class="timeline-header">
-      <span class="timeline-org">[Previous University]</span>
-      <span class="timeline-role">• B.Sc. Geography</span>
-      <span class="timeline-dates">20XX–20XX</span>
+      <span class="timeline-org">University of Bayreuth</span>
+      <span class="timeline-role">• B.Sc. Geography: Society and Enviroment</span>
+      <span class="timeline-dates">Oct. 2021 – Sept. 2025</span>
     </div>
+    <div class="timeline-meta">Geography Department, Bayreuth, Germany</div>
     <div class="timeline-desc">
-      <p>[Brief description of your bachelor's degree]</p>
+      <p>Thesis: Geopolitics of global Infrastructure</p>
+      <p>The bachelor's programme "Geography" comprises both the scientific methods of geography and specialist knowledge in a large number of geographical sub-disciplines. The broad curriculum enables students to solve spatial problems independently, and to adapt to the changing requirements of their future occupational fields.</p>
     </div>
   </div>
 </div>
