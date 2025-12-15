@@ -1,17 +1,17 @@
 [
   {
-    "title": "Wildfire Risk Assessment Using Machine Learning",
-    "description": "Developed a predictive model for wildfire risk assessment integrating satellite imagery, weather data, and historical fire records. The model achieved 87% accuracy in predicting high-risk areas.",
-    "image": "assets/wildfire-project.jpg",
-    "venue": "University of Salzburg",
-    "authors": "Louis Schmalisch",
+    "title": "Climate-resilient municipality of Bayreuth using the example of Sankt Georgen",
+    "description": "As part of this final project for our bachelor's degree, we examined the climate resilience of two sub-areas within a city district. It became clear that the newly planned sub-area has greater climate resilience than the older building structures in the long-established sub-area.",
+    "image": "assets/Studienprojekt_St.Georgen_Lindner_Neynaber_Schmalisch_Duesselmann.jpg",
+    "venue": "University of Bayreuth",
+    "authors": "Jela Düsselmann, Sina Lindner, Tim Neynaber, Louis Schmalisch",
     "year": 2024,
-    "tags": ["machine-learning", "remote-sensing", "gis"],
+    "tags": ["climate-resilience", "remote-sensing", "urban planning"],
     "links": {
-      "paper": "https://example.com/wildfire-paper.pdf",
-      "code": "https://github.com/schmlou/wildfire-risk",
-      "pdf": "assets/projects/wildfire-risk-paper.pdf",
-      "demo": "https://example.com/heat-map-viewer"
+      //"paper": "https://example.com/wildfire-paper.pdf",
+      //"code": "https://github.com/schmlou/wildfire-risk",
+      "pdf": "assets/projects/Studienprojekt_St.Georgen_Lindner_Neynaber_Schmalisch_Duesselmann.pdf"
+      //"demo": "https://example.com/heat-map-viewer"
     }
   }
 ]
