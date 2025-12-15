@@ -1,20 +1,7 @@
 # Experience
 
-## Research Assistant
-**Z_GIS, University of Salzburg** • 2024 - Present
+## Working Student
 
-Working on geographic information systems and remote sensing projects focusing on environmental monitoring and spatial analysis.
+**Asseco BERIT GmbH, Mannheim** • Jan. 2022 - Present
 
-## GIS Intern
-**[Company Name]** • 2023
-
-[Add your internship details here - what you did, technologies used, achievements]
-
-## Student Assistant
-**[University/Department]** • 2022 - 2023
-
-[Add details about your student assistant role]
-
----
-
-*[Edit this file to add your actual experience details]*
+Work as a student trainee on the adaptation of the in-house geographic information system “Samo” in areas such as WebGIS, data modeling, and implementation of regulations such as ALKIS in specialist modules.
