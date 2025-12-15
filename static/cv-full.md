@@ -32,14 +32,13 @@ Location: Salzburg, Austria<br>
     <div class="timeline-dot"></div>
     <div class="timeline-header">
       <span class="timeline-org">[Previous University]</span>
-      <span class="timeline-role">• B.Sc. Geography</span>
-      <span class="timeline-dates">2019–2022</span>
+      <span class="timeline-role">• B.Sc. Geography: Society and Enviroment</span>
+      <span class="timeline-dates">Oct. 2021 – Sept. 2025</span>
     </div>
-    <div class="timeline-meta">[City, Country]</div>
+    <div class="timeline-meta">[Bayreuth, Germany]</div>
     <div class="timeline-desc">
-      <p><strong>Specialization:</strong> Environmental Geography and GIS</p>
-      <p><strong>Bachelor Thesis:</strong> [Your bachelor thesis title]</p>
-      <p><strong>Honors:</strong> [Any honors, dean's list, etc.]</p>
+      <p><strong>Specialization:</strong> Human Geography</p>
+      <p><strong>Bachelor Thesis:</strong> [Geopolitics of global Infrastructure]</p>
     </div>
   </div>
 </div>
