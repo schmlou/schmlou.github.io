@@ -49,7 +49,7 @@ Other tool i encountered and use are:
 - Microsoft Suite
 - Atlassian Suite
 - DBeaver with mostly Oracle Databases
-- AI as a usefull help ;)
+- AI as a usefull helper ;)
 
 ## Beyond Academia
 
