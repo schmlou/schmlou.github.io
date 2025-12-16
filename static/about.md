@@ -21,6 +21,6 @@
 </div>
 
 Hi!<br>
-I'm Louis Schmalisch, a Master's student in [Applied Geoinformatics](https://www.plus.ac.at/geoinformatik/education/agi/?lang=en) at the Paris Lodron University Salzburg.
+I'm Louis Schmalisch, a master's student in [Applied Geoinformatics](https://www.plus.ac.at/geoinformatik/education/agi/?lang=en) at the Paris-Lodron University of Salzburg.
 
-I did my bachelor's in Geography, with a focus on human geography at the University of Bayreuth, where I discovered my interest in the geospatial domain.
+I completed my Bachelor of Science in Geography with a focus on human geography at the University of Bayreuth, where I discovered my interest in the geospatial domain.
