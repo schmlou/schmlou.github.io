@@ -1,5 +1,6 @@
 [
   {
+    "id": "climate-resilient-bayreuth",
     "title": "Climate-resilient municipality of Bayreuth using the example of Sankt Georgen",
     "description": "As part of this final project for our bachelor's degree, we examined the climate resilience of two sub-areas within a city district.",
     "descriptionFull": "As part of this final project for our bachelor's degree, we examined the climate resilience of two sub-areas within a city district of Bayreuth, Germany. The study focused on Sankt Georgen, comparing a newly planned development area with established building structures.\n\nUsing remote sensing data and GIS analysis, we assessed various climate resilience indicators including heat island effects, green space distribution, and water management capabilities. Our findings revealed that the newly planned sub-area demonstrates significantly greater climate resilience than the older building structures in the long-established sub-area.\n\nThe project combined multiple geospatial methods including satellite imagery analysis, urban climate modeling, and spatial planning assessments. Our recommendations provide actionable insights for urban planners to enhance climate adaptation strategies in existing neighborhoods.",

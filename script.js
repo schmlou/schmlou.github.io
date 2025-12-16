@@ -471,6 +471,25 @@ class MarkdownLoader {
                     const html = isProjectsPage ? this.renderProjectsList(projects) : this.renderProjects(projects);
                     contentElement.innerHTML = html;
 
+                    // Scroll to specific project if hash is present (projects page only)
+                    if (isProjectsPage && window.location.hash) {
+                        setTimeout(() => {
+                            const projectId = window.location.hash.substring(1);
+                            const projectElement = document.getElementById(projectId);
+                            if (projectElement) {
+                                const header = document.getElementById('main-header');
+                                const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
+                                const extraMargin = 20;
+                                const targetPosition = projectElement.getBoundingClientRect().top + window.pageYOffset - (headerHeight + extraMargin);
+
+                                window.scrollTo({
+                                    top: targetPosition,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }, 100);
+                    }
+
                     // Apply hover effect to new content (disabled)
                     // if (typeof window.applyBHoverEffect === 'function') {
                     //     window.applyBHoverEffect(contentElement);
@@ -530,10 +549,7 @@ class MarkdownLoader {
                     ` : ''}
                     <div class="projects-content">
                         <h3 class="projects-title">
-                            ${project.links?.paper ?
-                                `<a href="${project.links.paper}" class="projects-link" target="_blank" rel="noopener noreferrer">${project.title}</a>` :
-                                `<span class="projects-link">${project.title}</span>`
-                            }
+                            <a href="projects.html#${project.id || 'project-' + index}" class="projects-link">${project.title}</a>
                         </h3>
                         ${project.venue ? `<div class="projects-venue">${project.venue}${project.year ? ` • ${project.year}` : ''}</div>` : ''}
                         ${project.authors ? `<div class="projects-authors">${project.authors}</div>` : ''}
@@ -746,7 +762,7 @@ class MarkdownLoader {
                 '';
 
             html += `
-                <div class="project-list-item" data-index="${index}">
+                <div class="project-list-item" data-index="${index}" id="${project.id || 'project-' + index}">
                     ${project.image ? `
                         <div class="project-list-image">
                             <img src="${project.image}" alt="${project.title}" loading="lazy">
