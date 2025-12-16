@@ -6,7 +6,7 @@
 
 **Asseco BERIT GmbH, Mannheim** • Jan. 2022 - Present
 
-Since January 2022, I have been working at Asseco BERIT GmbH, located in Mannheim, Germany. I mainly work remotely due to my study location. The company operates globally with a focus on Geographic Information Systems and workflow management. My work is focused on the GIS solutions offered. Depending on current needs, I work on data models, thematic layers, or web GIS applications. Through this work, I have gained a broader understanding of GIS.
+I have been working at Asseco BERIT GmbH in Mannheim, Germany since January 2022. Due to my study location, I mainly work remotely. The company operates globally, focusing on geographic information systems (GIS) and workflow management. I focus on the GIS solutions offered by the company. Depending on the current needs of the company, I work on data models, thematic layers, or web GIS applications. Through this work, I have gained a broader understanding of GIS.
 
 **Technologies Used:** JAVA, XML, DBeaver, Oracle Databases, SAMO/LIDS
 
@@ -69,4 +69,4 @@ Since January 2022, I have been working at Asseco BERIT GmbH, located in Mannhei
 
 **Youth Football Coach** • 2016 - 2020
 
-I've coached one of the youth football Teams of my then local sports club.
+I coached one of the youth football teams at my local sports club at the time.
