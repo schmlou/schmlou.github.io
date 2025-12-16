@@ -24,33 +24,32 @@ I'm Louis Schmalisch, a Master's student at Z_GIS, Paris Lodron University Salzb
 
 ## Background
 
-My journey into geoinformatics began during my Bachelors studies, where I discovered the powerful intersection of geography, technology, and environmental science. This led me to pursue this Masters studies at Z_GIS.
+My journey into geoinformatics began during my Bachelor's studies, where I discovered the powerful intersection of geography, technology, and environmental science. This led me to pursue my Master's studies at Z_GIS.
 
 ## Research Interests
 
-My research focuses on the application of remote sensing and GIS technologies to address pressing environmental challenges. I'm particularly interested in:
+My geospatial interests focus on applying remote sensing and GIS technologies to address environmental and urban challenges. I'm particularly interested in:
 
 - Environmental monitoring using satellite imagery and drone technology
 - Spatial analysis for climate change adaptation and mitigation
+- Network and spatial analysis
 - Machine learning applications in geospatial data processing
 - Urban planning and sustainable development using GIS
 
 ## Current Work
 
-Currently im also working at [Asseco BERIT](https://asseco-berit.de/), part of the "Utility Division" of the Asseco Central Europe.
-
-Asseco BERIT and the Utility Division are the competence center within the entire Asseco Group for geographic information systems, mobile workforce management, asset management systems, and process solutions in the areas of public administration, utilities, and industry.
+Currently, I'm also working at [Asseco BERIT](https://asseco-berit.de/), part of the Utility Division of Asseco Central Europe. The division serves as the competence center within the Asseco Group for geographic information systems, mobile workforce management, asset management systems, and process solutions in public administration, utilities, and industry.
 
 ## Technical Skills
 
-I'm proficient in GIS software platforms (QGIS, ArcGIS, LIDS) and still learning programming languages (Python, Java, XML, JSON) for geospatial analysis and software development.
-Other tool i encountered and use are:
+I'm proficient in GIS software platforms (QGIS, ArcGIS) and continually developing my skills in programming languages (Python, Java) and data formats (XML, JSON) for geospatial analysis and software development.
+Other tools I've encountered and use regularly:
 
 - Microsoft Suite
 - Atlassian Suite
-- DBeaver with mostly Oracle Databases
-- AI as a usefull helper ;)
+- DBeaver with mostly Oracle databases
+- AI as a useful helper ;)
 
 ## Beyond Academia
 
-When I'm not analyzing spatial data, I enjoy exploring the beautiful landscapes around Salzburg, photography, and contributing to open-source GIS projects. I believe in the power of open data and open-source software to democratize access to geospatial technologies.
+When I'm not exploring the world through data, I enjoy exploring it in real life. Hiking, skiing, or running—sprinkle in some climbing or football, and I'm happy :)
