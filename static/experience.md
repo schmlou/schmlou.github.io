@@ -4,7 +4,7 @@
 
 **Asseco BERIT GmbH, Mannheim** • Jan. 2022 - Present
 
-Work as a student trainee on the adaptation of the in-house geographic information system “SAMO & LIDS” in areas such as WebGIS, data modeling, and implementation of regulations such as ALKIS in specialist modules.
+I'm a working student working on adapting the in-house geographic information system, "SAMO & LIDS," in areas such as WebGIS, data modeling, and implementing regulations like ALKIS in specialist modules.
 
 ## Education
 
