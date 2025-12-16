@@ -738,6 +738,13 @@ class MarkdownLoader {
         let html = '<div class="projects-list">';
 
         sortedProjects.forEach((project, index) => {
+            // Use descriptionFull if available, otherwise fall back to description
+            const fullDescription = project.descriptionFull || project.description;
+            // Convert line breaks to paragraphs for better formatting
+            const formattedDescription = fullDescription ?
+                fullDescription.split('\n\n').map(para => `<p class="project-list-description">${para}</p>`).join('') :
+                '';
+
             html += `
                 <div class="project-list-item" data-index="${index}">
                     ${project.image ? `
@@ -755,7 +762,7 @@ class MarkdownLoader {
                         ${project.year ? `<div class="project-list-year">${project.year}</div>` : ''}
                         ${project.venue ? `<div class="project-list-venue">${project.venue}</div>` : ''}
                         ${project.authors ? `<div class="project-list-authors">${project.authors}</div>` : ''}
-                        ${project.description ? `<p class="project-list-description">${project.description}</p>` : ''}
+                        ${formattedDescription}
                         ${project.tags && project.tags.length > 0 ? `
                             <div class="projects-tags">
                                 ${project.tags.map(tag => `<span class="tag tag-${tag.toLowerCase().replace(/\s+/g, '-')}">${tag}</span>`).join('')}
