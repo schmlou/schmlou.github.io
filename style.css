@@ -659,6 +659,10 @@ section.mb-16:hover {
     text-underline-offset: 2px;
 }
 
+.prose a:visited {
+    color: var(--color-link);
+}
+
 .prose a:hover {
     text-decoration-thickness: 2px;
 }
@@ -1146,6 +1150,14 @@ html {
     font-size: 0.875rem;
     color: var(--color-global-text);
     opacity: 0.8;
+}
+
+.projects-authors a {
+    color: var(--color-link);
+}
+
+.projects-authors a:visited {
+    color: var(--color-link);
 }
 
 .projects-year {
@@ -1715,6 +1727,14 @@ html {
 .project-list-authors {
     font-size: 0.875rem;
     color: var(--color-text-muted);
+}
+
+.project-list-authors a {
+    color: var(--color-link);
+}
+
+.project-list-authors a:visited {
+    color: var(--color-link);
 }
 
 .project-list-description {
