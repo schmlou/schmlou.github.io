@@ -18,7 +18,7 @@
   },
   {
     "id": "carto-geomedia-temp-anomalies",
-    "title": "Cartographic Representation of Temporal Anomalies in Climate Data in European Countries",
+    "title": "Cartographic Design and Geomedia: Visualizing Temperature Anomalies in European Countries",
     "description": "For our class Cartographic Design and Geomedia we create a physical and digital map to visualize temperature anomalies due to climate change in different European countries.",
     "descriptionFull": "For our final project in the Bachelor's program, we explored the visualization and analysis of temporal anomalies in urban climate datasets. Our study focused on the application of cartographic techniques to represent and interpret climate variations over time.\n\nUsing geospatial data and geomedia tools, we developed interactive maps that highlight areas with significant temperature fluctuations. Our findings demonstrate the effectiveness of cartographic approaches in identifying and communicating complex climate patterns within europe.\n\nThe project combined traditional cartographic methods with modern geomedia technologies, providing a comprehensive framework for visualizing temporal climate data for educational purposes.",
     "image": "assets/climate_anomalies_header.png",
